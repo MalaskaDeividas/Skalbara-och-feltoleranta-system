@@ -15,18 +15,21 @@ declare module 'express-session' {
     username: string
   }
 }
-
+// Express server initialization
 const app = express(); 
 
+// CORS middleware: Handles cross-origin resource sharing
 app.use(cors({
   origin: "http://localhost:3000", 
   credentials: true
 })); 
 // Parse incoming JSON request.
+// Middleware: Parses incoming JSON requests
 app.use(express.json());
 
+// Middleware: Parses cookies from incoming requests
 app.use(cookieParser()); 
-
+// Session middleware: Manages user sessions with settings like expiration
 app.set("trust proxy", 1); 
 app.use(session({
   secret: 'super-secret-key',
@@ -39,6 +42,7 @@ app.use(session({
   }
 }));
 
+// MongoDB Database Connection
 const mongoURI = 'mongodb+srv://Cluster46730:VE9vWGN0YkFm@cluster46730.bv6pq.mongodb.net/Hotel-404?retryWrites=true&w=majority&appName=Cluster46730'
 
 mongoose.connect(mongoURI)
@@ -49,17 +53,18 @@ mongoose.connect(mongoURI)
     console.error('MongoDB connection error:', err);
   });
 
+// Route handling
 app.use("/api/hotels", hotelRouter); 
 app.use("/api/user", userRouter);
 app.use("/api/booking", bookingRouter); 
 
+// Logging middleware: Logs request method and path
 app.use((req, _, next) => {
   console.log(req.path, req.method); 
   next(); 
 }); 
 
-
-// Start server
+// Start server on port 7700
 app.listen(7700, () => {
   console.log("Listening on port 7700"); 
 }); 

@@ -1,0 +1,178 @@
+<svg version="1.1" baseProfile="full" width="1038.0" height="355.0" viewBox="0 0 1038 355" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+<desc >#.interface: fill=lightblue
+#.enumeration: fill=lightgreen
+#.type: fill=lightgray
+
+[&lt;interface&gt;IBooking|+id: string;+user: string;+hotel: string;+from_date: string;+to_date: string;+cost: number|]
+[&lt;interface&gt;IHotel|+id: string;+price: string;+image: string;+description: string;+title: string;+city: string;+key: string|]
+[&lt;interface&gt;IHotelDetails|+page: { title: string; description: string; };+hotel_img: { url: string; };+hall_img: { url: string; };+room_img: { url: string; };+bath_img: { url: string; };+food_img: { url: string; };+other_img: { url: string; }|]
+[&lt;interface&gt;IPics|+img: string;+title: string;+rows: number;+cols: number;+key: string|]
+[&lt;interface&gt;IUser|+name: string;+username: string;+age: number;+password: string;+lastname: string;+key: string;+isAdmin: boolean|]
+[&lt;interface&gt;IPics|+img: string;+title: string;+rows: number;+cols: number;+key: string|]</desc>
+<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="normal" font-style="normal">
+<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
+<g stroke="transparent" fill="transparent">
+<rect x="0.0" y="0.0" height="355.0" width="1038.0" stroke="none"></rect>
+</g>
+<g transform="translate(8, 8)" fill="#33322E">
+<g transform="translate(20, 20)">
+<g data-name="IBooking">
+<g fill="lightblue" stroke="#33322E" data-name="IBooking">
+<rect x="0.0" y="73.0" height="153.0" width="160.0" data-name="IBooking"></rect>
+<path d="M0.0 105.0 L160.0 105.0" fill="none" data-name="IBooking"></path>
+<path d="M0.0 218.0 L160.0 218.0" fill="none" data-name="IBooking"></path>
+</g>
+<g transform="translate(0, 73)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IBooking" data-compartment="0">
+<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IBooking" data-compartment="0">
+<a id="frontend\src\Model\Booking.ts.IBooking" xlink:href="frontend\src\Model\Booking.ts"><text x="72.0" y="14.1" stroke="none" text-anchor="middle" data-name="IBooking" data-compartment="0">IBooking</text></a>
+
+</g>
+</g>
+<g transform="translate(0, 105)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IBooking" data-compartment="1">
+<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IBooking" data-compartment="1">
+<text x="0.0" y="14.1" stroke="none" data-name="IBooking" data-compartment="1">+id: string</text>
+<text x="0.0" y="30.3" stroke="none" data-name="IBooking" data-compartment="1">+user: string</text>
+<text x="0.0" y="46.5" stroke="none" data-name="IBooking" data-compartment="1">+hotel: string</text>
+<text x="0.0" y="62.7" stroke="none" data-name="IBooking" data-compartment="1">+from_date: string</text>
+<text x="0.0" y="78.9" stroke="none" data-name="IBooking" data-compartment="1">+to_date: string</text>
+<text x="0.0" y="95.1" stroke="none" data-name="IBooking" data-compartment="1">+cost: number</text>
+
+</g>
+</g>
+<g transform="translate(0, 218)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IBooking" data-compartment="2">
+<g transform="translate(8, 8)" fill="#33322E" data-name="IBooking" data-compartment="2">
+
+</g>
+</g>
+</g>
+<g data-name="IHotel">
+<g fill="lightblue" stroke="#33322E" data-name="IHotel">
+<rect x="200.0" y="65.0" height="169.0" width="167.0" data-name="IHotel"></rect>
+<path d="M200.0 97.0 L367.0 97.0" fill="none" data-name="IHotel"></path>
+<path d="M200.0 226.0 L367.0 226.0" fill="none" data-name="IHotel"></path>
+</g>
+<g transform="translate(200, 65)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IHotel" data-compartment="0">
+<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IHotel" data-compartment="0">
+<a id="frontend\src\Model\Hotel.ts.IHotel" xlink:href="frontend\src\Model\Hotel.ts"><text x="75.5" y="14.1" stroke="none" text-anchor="middle" data-name="IHotel" data-compartment="0">IHotel</text></a>
+
+</g>
+</g>
+<g transform="translate(200, 97)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IHotel" data-compartment="1">
+<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IHotel" data-compartment="1">
+<text x="0.0" y="14.1" stroke="none" data-name="IHotel" data-compartment="1">+id: string</text>
+<text x="0.0" y="30.3" stroke="none" data-name="IHotel" data-compartment="1">+price: string</text>
+<text x="0.0" y="46.5" stroke="none" data-name="IHotel" data-compartment="1">+image: string</text>
+<text x="0.0" y="62.7" stroke="none" data-name="IHotel" data-compartment="1">+description: string</text>
+<text x="0.0" y="78.9" stroke="none" data-name="IHotel" data-compartment="1">+title: string</text>
+<text x="0.0" y="95.1" stroke="none" data-name="IHotel" data-compartment="1">+city: string</text>
+<text x="0.0" y="111.3" stroke="none" data-name="IHotel" data-compartment="1">+key: string</text>
+
+</g>
+</g>
+<g transform="translate(200, 226)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IHotel" data-compartment="2">
+<g transform="translate(8, 8)" fill="#33322E" data-name="IHotel" data-compartment="2">
+
+</g>
+</g>
+</g>
+<g data-name="IHotelDetails">
+<g fill="lightblue" stroke="#33322E" data-name="IHotelDetails">
+<rect x="407.0" y="0.0" height="299.0" width="200.0" data-name="IHotelDetails"></rect>
+<path d="M407.0 32.0 L607.0 32.0" fill="none" data-name="IHotelDetails"></path>
+<path d="M407.0 291.0 L607.0 291.0" fill="none" data-name="IHotelDetails"></path>
+</g>
+<g transform="translate(407, 0)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IHotelDetails" data-compartment="0">
+<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IHotelDetails" data-compartment="0">
+<a id="frontend\src\Model\Hotel.ts.IHotelDetails" xlink:href="frontend\src\Model\Hotel.ts"><text x="92.0" y="14.1" stroke="none" text-anchor="middle" data-name="IHotelDetails" data-compartment="0">IHotelDetails</text></a>
+
+</g>
+</g>
+<g transform="translate(407, 32)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IHotelDetails" data-compartment="1">
+<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IHotelDetails" data-compartment="1">
+<text x="0.0" y="14.1" stroke="none" data-name="IHotelDetails" data-compartment="1">+page: { title: string</text>
+<text x="0.0" y="30.3" stroke="none" data-name="IHotelDetails" data-compartment="1">description: string</text>
+<text x="0.0" y="46.5" stroke="none" data-name="IHotelDetails" data-compartment="1">}</text>
+<text x="0.0" y="62.7" stroke="none" data-name="IHotelDetails" data-compartment="1">+hotel_img: { url: string</text>
+<text x="0.0" y="78.9" stroke="none" data-name="IHotelDetails" data-compartment="1">}</text>
+<text x="0.0" y="95.1" stroke="none" data-name="IHotelDetails" data-compartment="1">+hall_img: { url: string</text>
+<text x="0.0" y="111.3" stroke="none" data-name="IHotelDetails" data-compartment="1">}</text>
+<text x="0.0" y="127.5" stroke="none" data-name="IHotelDetails" data-compartment="1">+room_img: { url: string</text>
+<text x="0.0" y="143.7" stroke="none" data-name="IHotelDetails" data-compartment="1">}</text>
+<text x="0.0" y="159.9" stroke="none" data-name="IHotelDetails" data-compartment="1">+bath_img: { url: string</text>
+<text x="0.0" y="176.1" stroke="none" data-name="IHotelDetails" data-compartment="1">}</text>
+<text x="0.0" y="192.3" stroke="none" data-name="IHotelDetails" data-compartment="1">+food_img: { url: string</text>
+<text x="0.0" y="208.5" stroke="none" data-name="IHotelDetails" data-compartment="1">}</text>
+<text x="0.0" y="224.7" stroke="none" data-name="IHotelDetails" data-compartment="1">+other_img: { url: string</text>
+<text x="0.0" y="240.9" stroke="none" data-name="IHotelDetails" data-compartment="1">}</text>
+
+</g>
+</g>
+<g transform="translate(407, 291)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IHotelDetails" data-compartment="2">
+<g transform="translate(8, 8)" fill="#33322E" data-name="IHotelDetails" data-compartment="2">
+
+</g>
+</g>
+</g>
+<g data-name="IPics">
+<g fill="lightblue" stroke="#33322E" data-name="IPics">
+<rect x="647.0" y="81.0" height="137.0" width="133.0" data-name="IPics"></rect>
+<path d="M647.0 113.0 L780.0 113.0" fill="none" data-name="IPics"></path>
+<path d="M647.0 210.0 L780.0 210.0" fill="none" data-name="IPics"></path>
+</g>
+<g transform="translate(647, 81)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IPics" data-compartment="0">
+<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IPics" data-compartment="0">
+<a id="backend\src\Model\HotelPics.ts.IPics" xlink:href="backend\src\Model\HotelPics.ts"><text x="58.5" y="14.1" stroke="none" text-anchor="middle" data-name="IPics" data-compartment="0">IPics</text></a>
+
+</g>
+</g>
+<g transform="translate(647, 113)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IPics" data-compartment="1">
+<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IPics" data-compartment="1">
+<text x="0.0" y="14.1" stroke="none" data-name="IPics" data-compartment="1">+img: string</text>
+<text x="0.0" y="30.3" stroke="none" data-name="IPics" data-compartment="1">+title: string</text>
+<text x="0.0" y="46.5" stroke="none" data-name="IPics" data-compartment="1">+rows: number</text>
+<text x="0.0" y="62.7" stroke="none" data-name="IPics" data-compartment="1">+cols: number</text>
+<text x="0.0" y="78.9" stroke="none" data-name="IPics" data-compartment="1">+key: string</text>
+
+</g>
+</g>
+<g transform="translate(647, 210)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IPics" data-compartment="2">
+<g transform="translate(8, 8)" fill="#33322E" data-name="IPics" data-compartment="2">
+
+</g>
+</g>
+</g>
+<g data-name="IUser">
+<g fill="lightblue" stroke="#33322E" data-name="IUser">
+<rect x="820.0" y="65.0" height="169.0" width="162.0" data-name="IUser"></rect>
+<path d="M820.0 97.0 L982.0 97.0" fill="none" data-name="IUser"></path>
+<path d="M820.0 226.0 L982.0 226.0" fill="none" data-name="IUser"></path>
+</g>
+<g transform="translate(820, 65)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IUser" data-compartment="0">
+<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IUser" data-compartment="0">
+<a id="frontend\src\Model\User.ts.IUser" xlink:href="frontend\src\Model\User.ts"><text x="73.0" y="14.1" stroke="none" text-anchor="middle" data-name="IUser" data-compartment="0">IUser</text></a>
+
+</g>
+</g>
+<g transform="translate(820, 97)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IUser" data-compartment="1">
+<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IUser" data-compartment="1">
+<text x="0.0" y="14.1" stroke="none" data-name="IUser" data-compartment="1">+name: string</text>
+<text x="0.0" y="30.3" stroke="none" data-name="IUser" data-compartment="1">+username: string</text>
+<text x="0.0" y="46.5" stroke="none" data-name="IUser" data-compartment="1">+age: number</text>
+<text x="0.0" y="62.7" stroke="none" data-name="IUser" data-compartment="1">+password: string</text>
+<text x="0.0" y="78.9" stroke="none" data-name="IUser" data-compartment="1">+lastname: string</text>
+<text x="0.0" y="95.1" stroke="none" data-name="IUser" data-compartment="1">+key: string</text>
+<text x="0.0" y="111.3" stroke="none" data-name="IUser" data-compartment="1">+isAdmin: boolean</text>
+
+</g>
+</g>
+<g transform="translate(820, 226)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IUser" data-compartment="2">
+<g transform="translate(8, 8)" fill="#33322E" data-name="IUser" data-compartment="2">
+
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</svg>
