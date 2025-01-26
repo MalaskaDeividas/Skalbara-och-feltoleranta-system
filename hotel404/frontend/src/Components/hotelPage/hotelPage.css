@@ -1,0 +1,15 @@
+/* hotelPage.css */
+
+/* Lite styling för att göra att bilderna som visas i varje hotel sida blir snyggare  */
+.gallery-container {
+    width: 80%;         
+    max-width: 800px; 
+    margin: 0 auto;     
+  }
+  
+  .custom-image-gallery img {
+    height: 400px;      
+    object-fit: cover;  
+    border-radius: 8px; 
+  }
+  

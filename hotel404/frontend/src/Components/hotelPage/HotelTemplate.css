@@ -1,0 +1,12 @@
+.custom-image-list {
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+
+  }
+  *{
+    -ms-overflow-style: none;
+}
+::-webkit-scrollbar {
+    display: none;
+}
