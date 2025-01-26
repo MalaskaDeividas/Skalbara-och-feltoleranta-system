@@ -4,8 +4,8 @@
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>798</x>
-      <y>42</y>
+      <x>609</x>
+      <y>777</y>
       <w>140</w>
       <h>63</h>
     </coordinates>
@@ -16,22 +16,10 @@ bg=BLUE</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>588</x>
-      <y>98</y>
-      <w>280</w>
-      <h>399</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;.
-</panel_attributes>
-    <additional_attributes>380.0;10.0;10.0;550.0</additional_attributes>
-  </element>
-  <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>560</x>
-      <y>483</y>
+      <x>273</x>
+      <y>1029</y>
       <w>105</w>
       <h>63</h>
     </coordinates>
@@ -47,8 +35,8 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>952</x>
-      <y>469</y>
+      <x>665</x>
+      <y>1015</y>
       <w>119</w>
       <h>77</h>
     </coordinates>
@@ -64,8 +52,8 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>294</x>
-      <y>483</y>
+      <x>7</x>
+      <y>1029</y>
       <w>105</w>
       <h>56</h>
     </coordinates>
@@ -80,8 +68,8 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>224</x>
-      <y>210</y>
+      <x>1232</x>
+      <y>1120</y>
       <w>210</w>
       <h>70</h>
     </coordinates>
@@ -98,8 +86,8 @@ fg=red</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>14</x>
-      <y>280</y>
+      <x>924</x>
+      <y>1197</y>
       <w>161</w>
       <h>91</h>
     </coordinates>
@@ -117,19 +105,19 @@ fg=red</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>168</x>
-      <y>238</y>
-      <w>70</w>
-      <h>105</h>
+      <x>1078</x>
+      <y>1148</y>
+      <w>168</w>
+      <h>112</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>80.0;10.0;10.0;130.0</additional_attributes>
+    <additional_attributes>220.0;10.0;10.0;140.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>14</x>
-      <y>378</y>
+      <x>924</x>
+      <y>1295</y>
       <w>161</w>
       <h>35</h>
     </coordinates>
@@ -141,19 +129,19 @@ fg=red</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>168</x>
-      <y>238</y>
-      <w>70</w>
-      <h>154</h>
+      <x>1078</x>
+      <y>1148</y>
+      <w>168</w>
+      <h>161</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>80.0;10.0;10.0;200.0</additional_attributes>
+    <additional_attributes>220.0;10.0;10.0;210.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>0</x>
-      <y>133</y>
+      <x>910</x>
+      <y>1050</y>
       <w>168</w>
       <h>56</h>
     </coordinates>
@@ -167,8 +155,8 @@ fg=red</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>42</x>
-      <y>210</y>
+      <x>952</x>
+      <y>1127</y>
       <w>126</w>
       <h>56</h>
     </coordinates>
@@ -182,31 +170,19 @@ fg=red</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>161</x>
-      <y>224</y>
-      <w>77</w>
-      <h>35</h>
+      <x>1071</x>
+      <y>1141</y>
+      <w>175</w>
+      <h>28</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>10.0;20.0;90.0;30.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>427</x>
-      <y>84</y>
-      <w>399</w>
-      <h>154</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;.
-</panel_attributes>
-    <additional_attributes>547.0;10.0;10.0;200.0</additional_attributes>
+    <additional_attributes>10.0;20.0;230.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>630</x>
-      <y>728</y>
+      <x>343</x>
+      <y>1274</y>
       <w>154</w>
       <h>49</h>
     </coordinates>
@@ -220,8 +196,8 @@ bg=green</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>630</x>
-      <y>574</y>
+      <x>343</x>
+      <y>1120</y>
       <w>196</w>
       <h>56</h>
     </coordinates>
@@ -236,8 +212,8 @@ bg=green</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>630</x>
-      <y>644</y>
+      <x>343</x>
+      <y>1190</y>
       <w>210</w>
       <h>70</h>
     </coordinates>
@@ -253,8 +229,8 @@ bg=green</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>630</x>
-      <y>784</y>
+      <x>343</x>
+      <y>1330</y>
       <w>147</w>
       <h>70</h>
     </coordinates>
@@ -270,8 +246,8 @@ bg=green</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>924</x>
-      <y>637</y>
+      <x>637</x>
+      <y>1183</y>
       <w>175</w>
       <h>49</h>
     </coordinates>
@@ -285,8 +261,8 @@ bg=red</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>924</x>
-      <y>693</y>
+      <x>637</x>
+      <y>1239</y>
       <w>126</w>
       <h>49</h>
     </coordinates>
@@ -300,8 +276,8 @@ bg=red</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>924</x>
-      <y>749</y>
+      <x>637</x>
+      <y>1295</y>
       <w>154</w>
       <h>56</h>
     </coordinates>
@@ -316,8 +292,8 @@ bg=red</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>924</x>
-      <y>574</y>
+      <x>637</x>
+      <y>1120</y>
       <w>126</w>
       <h>49</h>
     </coordinates>
@@ -331,8 +307,8 @@ bg=red</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>168</x>
-      <y>0</y>
+      <x>7</x>
+      <y>875</y>
       <w>175</w>
       <h>70</h>
     </coordinates>
@@ -347,8 +323,8 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>819</x>
-      <y>595</y>
+      <x>532</x>
+      <y>1141</y>
       <w>119</w>
       <h>21</h>
     </coordinates>
@@ -358,8 +334,8 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>770</x>
-      <y>658</y>
+      <x>483</x>
+      <y>1204</y>
       <w>168</w>
       <h>182</h>
     </coordinates>
@@ -369,8 +345,8 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>581</x>
-      <y>588</y>
+      <x>294</x>
+      <y>1134</y>
       <w>21</w>
       <h>252</h>
     </coordinates>
@@ -380,8 +356,8 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>581</x>
-      <y>581</y>
+      <x>294</x>
+      <y>1127</y>
       <w>63</w>
       <h>28</h>
     </coordinates>
@@ -391,8 +367,8 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>581</x>
-      <y>812</y>
+      <x>294</x>
+      <y>1358</y>
       <w>63</w>
       <h>28</h>
     </coordinates>
@@ -402,8 +378,8 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>581</x>
-      <y>735</y>
+      <x>294</x>
+      <y>1281</y>
       <w>63</w>
       <h>28</h>
     </coordinates>
@@ -413,8 +389,8 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>581</x>
-      <y>658</y>
+      <x>294</x>
+      <y>1204</y>
       <w>63</w>
       <h>28</h>
     </coordinates>
@@ -424,8 +400,8 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>581</x>
-      <y>539</y>
+      <x>294</x>
+      <y>1085</y>
       <w>21</w>
       <h>70</h>
     </coordinates>
@@ -435,8 +411,8 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1071</x>
-      <y>763</y>
+      <x>784</x>
+      <y>1309</y>
       <w>21</w>
       <h>21</h>
     </coordinates>
@@ -446,8 +422,8 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1043</x>
-      <y>700</y>
+      <x>756</x>
+      <y>1246</y>
       <w>133</w>
       <h>28</h>
     </coordinates>
@@ -457,8 +433,8 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1092</x>
-      <y>651</y>
+      <x>805</x>
+      <y>1197</y>
       <w>84</w>
       <h>28</h>
     </coordinates>
@@ -468,8 +444,8 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1043</x>
-      <y>581</y>
+      <x>756</x>
+      <y>1127</y>
       <w>133</w>
       <h>28</h>
     </coordinates>
@@ -479,8 +455,8 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1064</x>
-      <y>504</y>
+      <x>777</x>
+      <y>1050</y>
       <w>112</w>
       <h>21</h>
     </coordinates>
@@ -488,22 +464,10 @@ bg=blue</panel_attributes>
     <additional_attributes>10.0;10.0;140.0;10.0</additional_attributes>
   </element>
   <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>889</x>
-      <y>98</y>
-      <w>105</w>
-      <h>378</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;.
-</panel_attributes>
-    <additional_attributes>10.0;10.0;130.0;520.0</additional_attributes>
-  </element>
-  <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>364</x>
-      <y>581</y>
+      <x>77</x>
+      <y>1127</y>
       <w>119</w>
       <h>56</h>
     </coordinates>
@@ -518,8 +482,8 @@ bg=blue</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>343</x>
-      <y>658</y>
+      <x>56</x>
+      <y>1204</y>
       <w>140</w>
       <h>63</h>
     </coordinates>
@@ -535,8 +499,8 @@ bg=blue</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>336</x>
-      <y>742</y>
+      <x>49</x>
+      <y>1288</y>
       <w>147</w>
       <h>77</h>
     </coordinates>
@@ -553,8 +517,8 @@ bg=blue</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>581</x>
-      <y>588</y>
+      <x>294</x>
+      <y>1134</y>
       <w>14</w>
       <h>14</h>
     </coordinates>
@@ -564,8 +528,8 @@ bg=blue</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>581</x>
-      <y>665</y>
+      <x>294</x>
+      <y>1211</y>
       <w>14</w>
       <h>14</h>
     </coordinates>
@@ -575,8 +539,8 @@ bg=blue</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>581</x>
-      <y>742</y>
+      <x>294</x>
+      <y>1288</y>
       <w>14</w>
       <h>14</h>
     </coordinates>
@@ -586,8 +550,8 @@ bg=blue</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>581</x>
-      <y>819</y>
+      <x>294</x>
+      <y>1365</y>
       <w>14</w>
       <h>14</h>
     </coordinates>
@@ -597,8 +561,8 @@ bg=blue</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>1155</x>
-      <y>588</y>
+      <x>868</x>
+      <y>1134</y>
       <w>14</w>
       <h>14</h>
     </coordinates>
@@ -608,8 +572,8 @@ bg=blue</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>1155</x>
-      <y>658</y>
+      <x>868</x>
+      <y>1204</y>
       <w>14</w>
       <h>14</h>
     </coordinates>
@@ -619,8 +583,8 @@ bg=blue</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>1155</x>
-      <y>707</y>
+      <x>868</x>
+      <y>1253</y>
       <w>14</w>
       <h>14</h>
     </coordinates>
@@ -630,8 +594,8 @@ bg=blue</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>1155</x>
-      <y>763</y>
+      <x>868</x>
+      <y>1309</y>
       <w>14</w>
       <h>14</h>
     </coordinates>
@@ -641,8 +605,8 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>476</x>
-      <y>581</y>
+      <x>189</x>
+      <y>1127</y>
       <w>126</w>
       <h>28</h>
     </coordinates>
@@ -653,30 +617,19 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>315</x>
-      <y>273</y>
-      <w>21</w>
-      <h>224</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;300.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>161</x>
-      <y>182</y>
-      <w>77</w>
-      <h>77</h>
+      <x>1071</x>
+      <y>1099</y>
+      <w>175</w>
+      <h>70</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>10.0;10.0;90.0;90.0</additional_attributes>
+    <additional_attributes>10.0;10.0;230.0;80.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>476</x>
-      <y>658</y>
+      <x>189</x>
+      <y>1204</y>
       <w>119</w>
       <h>28</h>
     </coordinates>
@@ -687,8 +640,8 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>819</x>
-      <y>595</y>
+      <x>532</x>
+      <y>1141</y>
       <w>119</w>
       <h>77</h>
     </coordinates>
@@ -698,8 +651,8 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>476</x>
-      <y>735</y>
+      <x>189</x>
+      <y>1281</y>
       <w>126</w>
       <h>28</h>
     </coordinates>
@@ -710,8 +663,8 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>476</x>
-      <y>763</y>
+      <x>189</x>
+      <y>1309</y>
       <w>126</w>
       <h>77</h>
     </coordinates>
@@ -722,8 +675,8 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>287</x>
-      <y>595</y>
+      <x>0</x>
+      <y>1141</y>
       <w>21</w>
       <h>182</h>
     </coordinates>
@@ -733,8 +686,8 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>287</x>
-      <y>588</y>
+      <x>0</x>
+      <y>1134</y>
       <w>91</w>
       <h>28</h>
     </coordinates>
@@ -744,8 +697,8 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>287</x>
-      <y>672</y>
+      <x>0</x>
+      <y>1218</y>
       <w>70</w>
       <h>28</h>
     </coordinates>
@@ -755,8 +708,8 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>287</x>
-      <y>749</y>
+      <x>0</x>
+      <y>1295</y>
       <w>63</w>
       <h>28</h>
     </coordinates>
@@ -766,8 +719,8 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>287</x>
-      <y>532</y>
+      <x>0</x>
+      <y>1078</y>
       <w>21</w>
       <h>84</h>
     </coordinates>
@@ -777,8 +730,8 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1071</x>
-      <y>756</y>
+      <x>784</x>
+      <y>1302</y>
       <w>105</w>
       <h>28</h>
     </coordinates>
@@ -788,8 +741,8 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1155</x>
-      <y>504</y>
+      <x>868</x>
+      <y>1050</y>
       <w>21</w>
       <h>280</h>
     </coordinates>
@@ -799,8 +752,8 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>770</x>
-      <y>770</y>
+      <x>483</x>
+      <y>1316</y>
       <w>168</w>
       <h>70</h>
     </coordinates>
@@ -810,13 +763,1326 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>476</x>
-      <y>588</y>
+      <x>189</x>
+      <y>1134</y>
       <w>119</w>
       <h>175</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 </panel_attributes>
     <additional_attributes>10.0;10.0;150.0;230.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>1246</x>
+      <y>770</y>
+      <w>126</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>frontend
+bg=green
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>1589</x>
+      <y>847</y>
+      <w>119</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>Components
+--
+homeScreen
+hotelDisplay
+hotelPage
+SignIn
+UserBookingPage
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>1666</x>
+      <y>756</y>
+      <w>112</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>Controller
+--
+BookingController.ts
+HotelController.ts
+UserController.ts
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>1498</x>
+      <y>966</y>
+      <w>119</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>Model
+--
+Booking.ts
+Hotel.ts
+HotelPics.ts
+User.ts
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>1624</x>
+      <y>574</y>
+      <w>126</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>index.tsx
+--
+component "Application"
+component "Pages"
+
+fg=red
+bg=gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>1603</x>
+      <y>1239</y>
+      <w>105</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>homeScreen
+--
+navBar.tsx
+searchBar.tsx
+searchResult.tsx
+bg=orange</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1603</x>
+      <y>1393</y>
+      <w>147</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>navBar.tsx
+--
+const handleLanguageClick
+const handleLanguageClose
+const handleLanguageSelect
+const handleAboutClick
+const handleAboutDialogClose
+const handleMyPageClick
+const handleMyPageClose
+const handleMyPageBookingClick
+const handleDeleteUserOnClick
+const handleSignOutButtonClick
+const handleBackToIndexClick
+bg=pink</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1603</x>
+      <y>1295</y>
+      <w>147</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>searchResult.tsx
+--
+const SearchResults
+bg=pink</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1603</x>
+      <y>1344</y>
+      <w>147</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>searchBar.tsx
+--
+const SearchBar
+const handleSearch
+bg=pink
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>0</x>
+      <y>1302</y>
+      <w>21</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;200.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>0</x>
+      <y>1428</y>
+      <w>1351</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;1910.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1330</x>
+      <y>1183</y>
+      <w>21</w>
+      <h>273</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;370.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1358</x>
+      <y>1183</y>
+      <w>21</w>
+      <h>273</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;370.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>294</x>
+      <y>1365</y>
+      <w>21</w>
+      <h>147</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;190.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>294</x>
+      <y>1484</y>
+      <w>1337</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;1890.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1610</x>
+      <y>1456</y>
+      <w>112</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=import UserController</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1358</x>
+      <y>1435</y>
+      <w>259</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=import index</panel_attributes>
+    <additional_attributes>350.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>1715</x>
+      <y>1505</y>
+      <w>154</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=.
+Expand to view all handleclicks
+fg=red
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1743</x>
+      <y>1456</y>
+      <w>63</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;70.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>742</x>
+      <y>791</y>
+      <w>518</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.&gt;
+&lt;&lt;Communication&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;720.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1743</x>
+      <y>1309</y>
+      <w>406</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;560.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2135</x>
+      <y>1295</y>
+      <w>147</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>HotelController.ts
+--
+id: Long="36548"
+[waiting for message]
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>1953</x>
+      <y>1029</y>
+      <w>98</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>hotelDisplay
+--
+displayHotelCard.tsx
+hotelCard.tsx
+bg=orange</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>1764</x>
+      <y>889</y>
+      <w>224</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>Note: Yellow Folder Components is Parent Folder 
+to ALL Orange Folders
+Note: Orange Folders are the names
+for different pages on the hotel page
+bg=orange</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1995</x>
+      <y>1064</y>
+      <w>42</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;40.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1953</x>
+      <y>1120</y>
+      <w>182</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>displayHotelCard.tsx
+--
+interface DisplayHotelProps
+const DisplayHotel
+bg=pink</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1743</x>
+      <y>1155</y>
+      <w>308</w>
+      <h>182</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+exports</panel_attributes>
+    <additional_attributes>10.0;240.0;420.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1967</x>
+      <y>1232</y>
+      <w>147</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>Hotel.ts
+--
+export interface IHotel
+export interface IHotelDetails
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2030</x>
+      <y>1155</y>
+      <w>196</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+exports
+</panel_attributes>
+    <additional_attributes>10.0;10.0;260.0;200.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2030</x>
+      <y>1155</y>
+      <w>49</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+exports</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1953</x>
+      <y>1078</y>
+      <w>182</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>hotelCard.tsx
+--
+const HotelCard: React.FC&lt;HotelProps&gt;
+bg=pink
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2016</x>
+      <y>1113</y>
+      <w>21</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>2023</x>
+      <y>1428</y>
+      <w>91</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>hotelPage
+--
+hotelBookbtn.tsx
+hotelDate.tsx
+hotelDescription.tsx
+hotelPage.tsx
+hoteltemplatetsx
+
+bg=orange</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2289</x>
+      <y>1295</y>
+      <w>147</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>BookingController.ts
+--
+id: Long="36548"
+[waiting for message]
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1967</x>
+      <y>1568</y>
+      <w>147</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>hotelBookbtn.tsx
+--
+interface IHotelDetails
+const CuteButton
+const HotelBooking
+bg=pink</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2058</x>
+      <y>1505</y>
+      <w>21</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1967</x>
+      <y>1624</y>
+      <w>147</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>hotelDate.tsx
+--
+const HotelDate
+bg=pink</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2023</x>
+      <y>1617</y>
+      <w>21</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1967</x>
+      <y>1659</y>
+      <w>147</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>hotelDescription.tsx
+--
+type DescriptionProps
+const HotelDescription
+bg=pink</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2030</x>
+      <y>1652</y>
+      <w>21</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1967</x>
+      <y>1701</y>
+      <w>147</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>hotelPage.tsx
+--
+const HotelPage
+const hotelImages
+bg=pink</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1743</x>
+      <y>1309</y>
+      <w>133</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+exports</panel_attributes>
+    <additional_attributes>10.0;20.0;170.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2030</x>
+      <y>1274</y>
+      <w>21</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+</panel_attributes>
+    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1967</x>
+      <y>1351</y>
+      <w>147</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>HotelPics.ts
+--
+export interface IPics
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1967</x>
+      <y>1512</y>
+      <w>147</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>hoteltemplate.tsx
+--
+interface IHotelPics
+function srcset
+const HotelTemplate: React.FC&lt;IHotelPics&gt;
+bg=pink</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1960</x>
+      <y>1379</y>
+      <w>49</w>
+      <h>147</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+exports</panel_attributes>
+    <additional_attributes>10.0;190.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1911</x>
+      <y>1316</y>
+      <w>21</w>
+      <h>413</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;570.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1911</x>
+      <y>1701</y>
+      <w>70</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+exports</panel_attributes>
+    <additional_attributes>80.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2359</x>
+      <y>1337</y>
+      <w>21</w>
+      <h>259</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;350.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2107</x>
+      <y>1568</y>
+      <w>273</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+exports</panel_attributes>
+    <additional_attributes>10.0;20.0;370.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>1491</x>
+      <y>1582</y>
+      <w>98</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>SignIn
+--
+login.tsx
+signup.tsx
+bg=orange</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1491</x>
+      <y>1631</y>
+      <w>147</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>login.tsx
+--
+const Login
+const handleLogin
+bg=pink</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1491</x>
+      <y>1680</y>
+      <w>147</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>signup.tsx
+--
+const Signup
+const handleSignup
+const handKeyDown
+bg=pink</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1358</x>
+      <y>1435</y>
+      <w>21</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1358</x>
+      <y>1512</y>
+      <w>21</w>
+      <h>182</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;240.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>1799</x>
+      <y>826</y>
+      <w>126</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>Note: Green objects belong
+to Controller
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1148</x>
+      <y>1533</y>
+      <w>154</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>UserController
+--
+export async function VerifyUser
+export async function CreateUser
+export async function DeleteUser
+export async function LogOut
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1295</x>
+      <y>1554</y>
+      <w>84</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+exports</panel_attributes>
+    <additional_attributes>100.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1358</x>
+      <y>1666</y>
+      <w>147</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+</panel_attributes>
+    <additional_attributes>190.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>1652</x>
+      <y>994</y>
+      <w>161</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>Note: Red objects belong to Model
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1498</x>
+      <y>1057</y>
+      <w>119</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>User.ts
+--
+export interface IUser
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2457</x>
+      <y>1155</y>
+      <w>126</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>Booking.ts
+--
+export interface IBooking
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>2303</x>
+      <y>1106</y>
+      <w>98</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>UserBookingPage
+--
+userBooking.tsx
+bg=orange</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2303</x>
+      <y>1155</y>
+      <w>98</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>userBookings.tsx
+--
+const Bookings
+bg=pink</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2359</x>
+      <y>1183</y>
+      <w>49</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+exports</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2394</x>
+      <y>1155</y>
+      <w>77</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+exports</panel_attributes>
+    <additional_attributes>10.0;20.0;90.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1547</x>
+      <y>1022</y>
+      <w>21</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1610</x>
+      <y>973</y>
+      <w>56</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;60.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1701</x>
+      <y>924</y>
+      <w>77</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;90.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1771</x>
+      <y>805</y>
+      <w>42</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;40.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1806</x>
+      <y>560</y>
+      <w>161</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>component "Application"
+--
+[Application] --&gt; [LoggedinContext]
+[Application] --&gt; [UsernameContext]
+[Application] --&gt; [BrowserRouter]
+[Application] --&gt; [Axios]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1806</x>
+      <y>658</y>
+      <w>91</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>component
+--
+[Login]
+[Signup]
+[NavAppBar]
+[SearchBar]
+[DisplayHotel]
+[Bookings]
+[HotelPage]
+[SearchResults]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1743</x>
+      <y>602</y>
+      <w>77</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;90.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1743</x>
+      <y>588</y>
+      <w>77</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;30.0;90.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1330</x>
+      <y>595</y>
+      <w>308</w>
+      <h>189</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.&gt;
+</panel_attributes>
+    <additional_attributes>10.0;250.0;420.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1372</x>
+      <y>777</y>
+      <w>308</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.&gt;
+</panel_attributes>
+    <additional_attributes>10.0;30.0;420.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1358</x>
+      <y>812</y>
+      <w>245</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.&gt;
+</panel_attributes>
+    <additional_attributes>10.0;10.0;330.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1323</x>
+      <y>826</y>
+      <w>189</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.&gt;
+</panel_attributes>
+    <additional_attributes>10.0;10.0;250.0;200.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>742</x>
+      <y>812</y>
+      <w>504</w>
+      <h>322</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.&gt;
+</panel_attributes>
+    <additional_attributes>10.0;10.0;700.0;440.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>686</x>
+      <y>833</y>
+      <w>21</w>
+      <h>196</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.&gt;
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;260.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>322</x>
+      <y>812</y>
+      <w>308</w>
+      <h>231</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.&gt;
+</panel_attributes>
+    <additional_attributes>420.0;10.0;10.0;310.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>1505</x>
+      <y>1183</y>
+      <w>84</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>Database
+bg=Red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1400</x>
+      <y>1197</y>
+      <w>126</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.&gt;
+</panel_attributes>
+    <additional_attributes>10.0;150.0;160.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>1365</x>
+      <y>1302</y>
+      <w>56</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>bookings
+--
+_id
+hotel
+user
+from_date
+to_date
+cost
+__v
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>1449</x>
+      <y>1309</y>
+      <w>56</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>hotels
+--
+_id
+display
+page
+hotel_img
+hall_img
+room_img
+bath_img
+food_img
+other_img
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>1540</x>
+      <y>1309</y>
+      <w>63</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>users
+--
+_id
+name
+lastname
+username
+age
+password
+isAdmin
+false
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1463</x>
+      <y>1204</y>
+      <w>91</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.&gt;
+</panel_attributes>
+    <additional_attributes>10.0;150.0;110.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1540</x>
+      <y>1204</y>
+      <w>28</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.&gt;
+</panel_attributes>
+    <additional_attributes>20.0;150.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1435</x>
+      <y>1155</y>
+      <w>84</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.&gt;
+</panel_attributes>
+    <additional_attributes>100.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1575</x>
+      <y>336</y>
+      <w>147</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>Application
+--
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1645</x>
+      <y>378</y>
+      <w>21</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.&gt;
+</panel_attributes>
+    <additional_attributes>10.0;280.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLActor</id>
+    <coordinates>
+      <x>1470</x>
+      <y>224</y>
+      <w>42</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>Actor</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1484</x>
+      <y>245</y>
+      <w>112</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;140.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLActor</id>
+    <coordinates>
+      <x>1694</x>
+      <y>182</y>
+      <w>42</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>Actor</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLActor</id>
+    <coordinates>
+      <x>1589</x>
+      <y>182</y>
+      <w>42</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>Actor</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLActor</id>
+    <coordinates>
+      <x>1785</x>
+      <y>224</y>
+      <w>42</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>Actor</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1603</x>
+      <y>203</y>
+      <w>28</w>
+      <h>147</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;20.0;190.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1673</x>
+      <y>203</y>
+      <w>56</w>
+      <h>147</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>60.0;10.0;10.0;190.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1715</x>
+      <y>245</y>
+      <w>105</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>130.0;10.0;10.0;130.0</additional_attributes>
   </element>
 </diagram>
