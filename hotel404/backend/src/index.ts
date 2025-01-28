@@ -43,7 +43,7 @@ app.use(session({
 }));
 
 // MongoDB Database Connection
-const mongoURI = 'mongodb+srv://Cluster46730:VE9vWGN0YkFm@cluster46730.bv6pq.mongodb.net/Hotel-404?retryWrites=true&w=majority&appName=Cluster46730'
+const mongoURI = 'mongodb+srv://Cluster46730:VE9vWGN0YkFm@cluster46730.bv6pq.mongodb.net/'
 
 mongoose.connect(mongoURI)
   .then(() => {

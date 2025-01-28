@@ -23,3 +23,8 @@ export async function CreateBooking(
     from_date: from_date,
     to_date: to_date}); 
 };  
+
+
+//skapa ny CreateBookingEasy som gör samma som create booking men inte binder det till user utan endast email och tar all user info och sparar det till user.
+// behövs ändring i bookings.ts backend för att det ska funka, även model perhaps.
+export async function CreateBookingEasy (){};
