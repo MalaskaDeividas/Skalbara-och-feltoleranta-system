@@ -18,6 +18,14 @@ npm install #install all dependencies
 npm run start
 
 
+[Kill the Process Using Port 7700]
+Get-Process -Id (Get-NetTCPConnection -LocalPort 7700).OwningProcess
+
+[If it shows a process, kill it with:]
+Stop-Process -Id (Get-NetTCPConnection -LocalPort 7700).OwningProcess -Force
+
+
+
 
 
 
