@@ -31,67 +31,61 @@ const booking = () => {
   )
 }
 
+
 const Application: React.FC = () => {
   const [loggedin, setLoggedin] = useState(false);
   const [globalUsername, setGlobalUsername] = useState("");
 
-  axios.defaults.withCredentials = true;  
+  axios.defaults.withCredentials = true;
   useEffect(() => {
-    const checkSession = async() => {
+    const checkSession = async () => {
       try {
-        const session = await axios.get("http://localhost:7700/api/user/session");    
-        setLoggedin(true); 
+        // Check if the user is already logged in by making an API request
+        await axios.get("http://localhost:7700/api/user/session");
+        setLoggedin(true);
       } catch {
-        setLoggedin(false); 
+        setLoggedin(false);
       }
     };
-    checkSession(); 
+    checkSession();
   }, []);
 
   return (
-    <div>
-      <LoggedinContext.Provider value={{loggedin: loggedin, setLoggedin: setLoggedin}}>
-        <UsernameContext.Provider value={{globalUsername, setGlobalUsername}}>
-          <BrowserRouter>
-            <NavAppBar/>
-            <Routes>
-              {/* Default route: Home page */}
-              <Route path="/" element={
+    <LoggedinContext.Provider value={{ loggedin, setLoggedin }}>
+      <UsernameContext.Provider value={{ globalUsername, setGlobalUsername }}>
+        <BrowserRouter>
+          <NavAppBar /> {/* Navigation bar remains visible at all times */}
+          <Routes>
+            <Route
+              path="/"
+              element={
                 <div>
-                  <SearchBar/>
-                  <DisplayHotel/>
+                  <SearchBar />
+                  <DisplayHotel /> {/* Users can browse hotels without logging in */}
                 </div>
-              }/>
-
-              {/* Public routes */}
-              <Route path="/hotelDetail/:hotelId" element={<HotelPage/>}/>
-              <Route path="/search-results/*" element={<SearchResults/>}/>
-
-              {/* Authentication routes */}
-              <Route path="/login" element={<Login/>}/>
-              <Route path="/signup" element={<Signup/>}/>
-
-              {/* Protected routes (only accessible when logged in) */}
-              {loggedin && (
-                <>
-                  <Route path="/mybookings" element={<Bookings/>}/>
-                </>
-              )}
-
-              {/* Fallback route */}
-              <Route path="*" element={
+              }
+            />
+            {/* Restrict access to bookings only if the user is logged in */}
+            <Route path="/mybookings" element={loggedin ? <Bookings /> : <Login />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/hotelDetail/:hotelId" element={<HotelPage />} />
+            <Route path="/search-results/*" element={<SearchResults />} />
+            <Route
+              path="*"
+              element={
                 <div>
-                  <SearchBar/>
-                  <DisplayHotel/>
+                  <SearchBar />
+                  <DisplayHotel />
                 </div>
-              }/>
-            </Routes>
-          </BrowserRouter>
-        </UsernameContext.Provider>
-      </LoggedinContext.Provider>
-    </div>
+              }
+            />
+          </Routes>
+        </BrowserRouter>
+      </UsernameContext.Provider>
+    </LoggedinContext.Provider>
   );
-}; 
+};
 /*
 const Application: React.FC = () => {
   const [loggedin, setLoggedin] = useState(false);
