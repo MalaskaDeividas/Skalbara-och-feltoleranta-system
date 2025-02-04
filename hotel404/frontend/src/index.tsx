@@ -38,6 +38,68 @@ const Application: React.FC = () => {
   axios.defaults.withCredentials = true;  
   useEffect(() => {
     const checkSession = async() => {
+      try {
+        const session = await axios.get("http://localhost:7700/api/user/session");    
+        setLoggedin(true); 
+      } catch {
+        setLoggedin(false); 
+      }
+    };
+    checkSession(); 
+  }, []);
+
+  return (
+    <div>
+      <LoggedinContext.Provider value={{loggedin: loggedin, setLoggedin: setLoggedin}}>
+        <UsernameContext.Provider value={{globalUsername, setGlobalUsername}}>
+          <BrowserRouter>
+            <NavAppBar/>
+            <Routes>
+              {/* Default route: Home page */}
+              <Route path="/" element={
+                <div>
+                  <SearchBar/>
+                  <DisplayHotel/>
+                </div>
+              }/>
+
+              {/* Public routes */}
+              <Route path="/hotelDetail/:hotelId" element={<HotelPage/>}/>
+              <Route path="/search-results/*" element={<SearchResults/>}/>
+
+              {/* Authentication routes */}
+              <Route path="/login" element={<Login/>}/>
+              <Route path="/signup" element={<Signup/>}/>
+
+              {/* Protected routes (only accessible when logged in) */}
+              {loggedin && (
+                <>
+                  <Route path="/mybookings" element={<Bookings/>}/>
+                </>
+              )}
+
+              {/* Fallback route */}
+              <Route path="*" element={
+                <div>
+                  <SearchBar/>
+                  <DisplayHotel/>
+                </div>
+              }/>
+            </Routes>
+          </BrowserRouter>
+        </UsernameContext.Provider>
+      </LoggedinContext.Provider>
+    </div>
+  );
+}; 
+/*
+const Application: React.FC = () => {
+  const [loggedin, setLoggedin] = useState(false);
+  const [globalUsername, setGlobalUsername] = useState("");
+
+  axios.defaults.withCredentials = true;  
+  useEffect(() => {
+    const checkSession = async() => {
       //Every time app is rendered, try to authenticate to the server
       //If unsuccessful, set loggedIn-state to false. 
 
@@ -51,7 +113,7 @@ const Application: React.FC = () => {
     }
     checkSession(); 
   }, []);
-
+  
   //If user is not logged in, render only login and signup pages 
   if(!loggedin) {
     return (
@@ -103,7 +165,7 @@ const Application: React.FC = () => {
     )
   }
 }; 
-
+*/
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
