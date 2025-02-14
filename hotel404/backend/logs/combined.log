@@ -1,0 +1,12 @@
+2025-02-14 21:11:00 [[31MERROR[39M] [printf.js:11]: No user found
+2025-02-14 21:11:00 [[31MERROR[39M] [printf.js:11]: Login not found
+2025-02-14 21:11:00 [[31MERROR[39M] [printf.js:11]: Routing to handle user login failed
+2025-02-14 21:11:10 [[32MINFO[39M] [printf.js:11]: Finding username..
+2025-02-14 21:11:10 [[32MINFO[39M] [printf.js:11]: Did not find username!
+2025-02-14 21:11:10 [[32MINFO[39M] [printf.js:11]: Checking age..
+2025-02-14 21:11:10 [[32MINFO[39M] [printf.js:11]: User succesfully created!
+2025-02-14 21:11:10 [[32MINFO[39M] [printf.js:11]: Routing to handle user signup!
+2025-02-14 21:11:12 [[32MINFO[39M] [printf.js:11]: Getting Hotels..
+2025-02-14 21:11:12 [[32MINFO[39M] [printf.js:11]: Routing all hotels
+2025-02-14 21:11:12 [[32MINFO[39M] [printf.js:11]: Getting Hotels..
+2025-02-14 21:11:12 [[32MINFO[39M] [printf.js:11]: Routing all hotels

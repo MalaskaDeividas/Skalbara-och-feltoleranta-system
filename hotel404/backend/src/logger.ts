@@ -1,7 +1,11 @@
 import winston from "winston";
 import path from 'path';
+import { fileURLToPath } from 'url';
 
-const logDir = path.join(__dirname, 'logs');
+
+
+
+const logDir = path.join(process.cwd(), 'logs');
 const { combine, timestamp, printf, colorize } = winston.format;
 
 // en funktion för att hämta vilken fil och kod rad error sker på
