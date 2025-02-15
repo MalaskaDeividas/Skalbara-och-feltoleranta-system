@@ -1,5 +1,6 @@
 import { Booking } from "../Model/Booking"; 
 import { Hotel } from "../Model/HotelModel";
+import logger from '../logger';
 
 
 // Function to delete a booking by its ID
@@ -7,17 +8,19 @@ export async function deleteBooking(bookingId: string) {
     
     try {
         const booking = await Booking.findByIdAndDelete(bookingId);
-        
+        logger.info('Booking ID has been deleted: ${bookingId}');
+
         if (!booking) {
-            throw new Error('Error 001: Booking not found');
+            logger.error('Booking not found');
+            throw new Error('Booking not found');
         }
         
     } catch (error) {
         
         if (error instanceof Error) {
-            console.error('Error retrieving booking by ID:', error.message);
+          logger.error('Retrieving booking by ID');
         } else {
-            console.error('An unexpected error occurred:', error);
+          logger.error('Unexpected error occured');
         }
         throw error;
     }
@@ -35,15 +38,19 @@ export async function createBooking(hotelID: string, user: string, from_date: st
   //If checkout date is less than checkin date, throw an error
   //Also throw an error if either date is before the current time
   if(days < 0){
+    logger.error('Invalid dates');
     throw new Error("invalid dates"); 
   } else if(Number(date1) < timeNow || Number(date2) < timeNow){
+    logger.error('Invalid dates');
     throw new Error("invalid dates"); 
   }
   if(!hotel){
+    logger.error('Hotel not found');
     throw new Error("couldn't find hotel");
   }
   const cost = hotel.display?.price;
   if(!cost){
+    logger.error('Hotel price not found');
     throw new Error("Couldn't get hotel price"); 
   }
   const calculatedCost = cost * days; 
@@ -56,23 +63,23 @@ export async function createBooking(hotelID: string, user: string, from_date: st
   });
 }
 // Function to retrieve bookings for a specific user
-export async function getBookingForUser(username: string) {
-  console.log(username); 
-  const bookings = await Booking.find({user: username});
-  console.log(bookings);
-  var formattedBookings = []
-  for(let booking of bookings) {
-    console.log(booking); 
-    const hotel = await Hotel.findById(booking.hotel);
-    const formattedBooking = {
-      id: booking.id,
-      hotel: hotel?.display?.title, 
-      user: booking.user, 
-      to_date: booking.to_date.split("T")[0], 
-      from_date: booking.from_date.split("T")[0], 
-      cost: booking.cost
-    }; 
-    formattedBookings.push(formattedBooking); 
+export async function getBookingForUser(username: string) {  
+    console.log(username); 
+    const bookings = await Booking.find({user: username});
+    console.log(bookings);
+    var formattedBookings = []
+    for(let booking of bookings) {
+      console.log(booking); 
+      const hotel = await Hotel.findById(booking.hotel);
+      const formattedBooking = {
+        id: booking.id,
+        hotel: hotel?.display?.title, 
+        user: booking.user, 
+        to_date: booking.to_date.split("T")[0], 
+        from_date: booking.from_date.split("T")[0], 
+        cost: booking.cost
+      }; 
+      formattedBookings.push(formattedBooking); 
+    }
+    return formattedBookings; 
   }
-  return formattedBookings; 
-}

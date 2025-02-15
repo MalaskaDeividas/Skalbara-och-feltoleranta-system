@@ -2,6 +2,7 @@ import mongoose from "mongoose";
 import { User } from "../Model/User";
 import { error } from "console";
 import { Booking } from "../Model/Booking";
+import logger from  "../logger";
 
 
 //function som hanterar login
@@ -12,6 +13,7 @@ export async function AuthLogin (username: string, password:string)
         if (!found)
         {
             //If there is no sush a username
+            logger.error('No user found');
             throw new Error('User not found');
         }
         //Om den hittar ett doc där username och password stämmer så fås _id
@@ -21,11 +23,11 @@ export async function AuthLogin (username: string, password:string)
     catch (error)
     {
         if(error instanceof Error) {
-            console.error('Nånting', error.message)
+            logger.error('Login not found');
         }
         else 
         {
-            console.error('annat', error)
+            logger.error('Login not found');
         }
         throw error;
     }
@@ -38,24 +40,28 @@ async function usernameCheck(username: string)
 {
     try {
         const check = await User.findOne({username:username})
-
+        logger.info('Finding username..');
         if(check)
         {
             //En match hittades
+            logger.info('Found username!');
             return false;
         }
         //En match hittades inte
+        logger.info('Did not find username!');
         return true;
     }
     catch (error)
-    {
+    {   
+        logger.error('Error in fetching username');
         console.error(error)
     }
 }
 //En funktion för att kolla ålder
 //Om åldern är ok returnar den true 
 function checkAge (age:number) 
-{
+{   
+    logger.info('Checking age..');
     return age >=18;
 }
 
@@ -66,11 +72,12 @@ export async function newUser(name:string, lastname:string, username:string, age
         const secondCheck = checkAge(age);
         if(!firstCheck)
         {   
-            
+            logger.info('Username is taken!');
             throw new Error('This username is taken');
         }
         else if(!secondCheck)
-        {
+        {   
+            logger.info('Age too low to make account!');
             throw new Error('You are too young to make an account');
         }
         User.create({
@@ -83,7 +90,7 @@ export async function newUser(name:string, lastname:string, username:string, age
 
         })
 
-        console.log("User Successfully created!");
+        logger.info('User succesfully created!');
     
     
 
@@ -102,11 +109,11 @@ export async function deleteUser(username:string) {
     {
         if (error instanceof Error) 
         {
-            console.error('Error deleting user by ID:', error.message);
+            logger.error('Error deleting user by ID');
         } 
         else 
         {
-            console.error('An unexpected error occurred:', error);
+            logger.error('An unexpected error occurred:');
         }
 
         throw error;

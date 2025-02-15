@@ -1,5 +1,6 @@
 import jwt from "jsonwebtoken"; 
 import { Request, Response, NextFunction } from "express"; 
+import logger from "../logger";
 
 // Secret key for signing and verifying JWT tokens
 export const accessTokenSecret = "CcBcjADRsaP6AHcWZ0tn";
@@ -19,7 +20,7 @@ export const authenticateJWT = (req: Request, res: Response, next: NextFunction)
             req.user = (decode as { username: string }).username;
             next(); 
         } catch (error) {
-            
+            logger.error('Couldnt verify token');
             return res.sendStatus(403); 
         }
     } else {

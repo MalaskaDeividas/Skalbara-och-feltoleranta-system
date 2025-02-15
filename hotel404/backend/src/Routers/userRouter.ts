@@ -1,6 +1,7 @@
 import { AuthLogin, newUser, deleteUser } from "../controllers/userController"; 
 import { accessTokenSecret, authenticateJWT } from "../controllers/auth";
 import jwt from "jsonwebtoken"; 
+import logger from "../logger";
 
 
 import express from "express"; 
@@ -10,7 +11,8 @@ userRouter.post("/login", async function(req, res, next){
   const username = req.body.username; 
   const password = req.body.password; 
   try {
-    const validUser = await AuthLogin(username, password);    
+    const validUser = await AuthLogin(username, password);
+    logger.info('Rounting to handle user login!');    
     const accessToken = jwt.sign({username: username}, accessTokenSecret, {expiresIn: "20m"});
     res.cookie('token', accessToken, {httpOnly: true}); 
     res.sendStatus(201); 
@@ -21,6 +23,7 @@ userRouter.post("/login", async function(req, res, next){
   }
   catch (error) {
   console.log(error); 
+    logger.error('Routing to handle user login failed');
     res.status(400).send(error)
   }
   
@@ -38,9 +41,11 @@ userRouter.post("/signup", async function(req, res){
     const createUser = await newUser(name, lastname, username, age, password, isAdmin);
     const accessToken = jwt.sign({username: username}, accessTokenSecret, {expiresIn: "20m"});
     res.cookie('token', accessToken, {httpOnly: true}); 
+    logger.info('Routing to handle user signup!');
     res.json().status(201).send(); 
   }
   catch{
+    logger.error('Routing to handle user signup failed');
     res.sendStatus(400); 
   }
 })
@@ -52,9 +57,11 @@ userRouter.delete("/deleteme", authenticateJWT, async function(req, res){
     try {
     const userDelete = await deleteUser(userID);
     res.cookie("token", "none", {maxAge: 1});
+    logger.info('Routing to delete user!');
     res.sendStatus(201);
   }
   catch {
+    logger.error('Routing to delete user failed');
     res.sendStatus(400);
   }
 });
@@ -62,8 +69,10 @@ userRouter.delete("/deleteme", authenticateJWT, async function(req, res){
 userRouter.get("/logout", authenticateJWT, async function(req, res){
   try {
     res.cookie("token", "none", {maxAge: 1});
+    logger.info('Routing to handle user logout!');
     res.sendStatus(200);
   } catch {
+    logger.error('Routing to logout user failed');
     res.sendStatus(400);
   }
   

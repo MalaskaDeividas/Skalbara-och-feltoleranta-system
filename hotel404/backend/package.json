@@ -22,7 +22,8 @@
     "i": "^0.3.7",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.6.3",
-    "save-dev": "^0.0.1-security"
+    "save-dev": "^0.0.1-security",
+    "winston": "^3.17.0"
   },
   "devDependencies": {
     "@types/cookie-parser": "^1.4.7",
