@@ -21,9 +21,9 @@ jobs:
 
       - name: Build and Push Docker Image
         run: |
-          docker build -t hotel404ContainerRegistry.azurecr.io/my-microservice:latest -f hotel404/backend/Dockerfile hotel404/backend .
+          docker build -t hotel404ContainerRegistry.azurecr.io/my-microservice:latest -f hotel404/backend/Dockerfile .
           docker push hotel404ContainerRegistry.azurecr.io/my-microservice:latest
-          docker build -t hotel404ContainerRegistry.azurecr.io/my-microservice:latest -f hotel404/frontend/Dockerfile hotel404/frontend .
+          docker build -t hotel404ContainerRegistry.azurecr.io/my-microservice:latest -f hotel404/frontend/Dockerfile .
           docker push hotel404ContainerRegistry.azurecr.io/my-microservice:latest
 
   deploy:
