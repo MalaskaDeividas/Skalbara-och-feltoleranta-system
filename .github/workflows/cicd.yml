@@ -33,7 +33,7 @@ jobs:
         run: az login --use-device-code
 
       - name: Get AKS credentials
-        run: az aks get-credentials --resource-group hotel404RecourceGroup-rg --name hotel404-aks
+        run: az aks get-credentials --resource-group hotel404ResourceGroup-rg --name hotel404-aks
 
       - name: Deploy to AKS
         run: |
