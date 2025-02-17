@@ -29,8 +29,8 @@ jobs:
       - name: Set up Kubernetes
         uses: azure/setup-kubectl@v3
 
-      - name: Get AKS credentials
-        run: az aks get-credentials --resource-group hotel404-rg --name hotel404-aks
+      - name: Login to Azure using Managed Identity
+        run: az login --identity
 
       - name: Deploy to AKS
         run: |
