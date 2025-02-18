@@ -37,5 +37,5 @@ jobs:
 
       - name: Deploy to AKS
         run: |
-          kubectl apply -f k8s/deployment.yaml
+          kubectl apply -f ./k8s/deployment.yaml
           kubectl set image deployment/hotel404-microservice hotel404-microservice=${{ secrets.DOCKER_USERNAME }}/hotel404-microservice:${{ github.sha }}
