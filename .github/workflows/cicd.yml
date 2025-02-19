@@ -30,10 +30,10 @@ jobs:
         uses: azure/setup-kubectl@v3
 
       - name: Login to Azure
-        run: az login --use-device-code
+        run: az login --identity
 
       - name: Get AKS credentials
-        run: az aks get-credentials --resource-group hotel404ResourceGroup --name hotel404AKSCluster
+        run: az aks get-credentials --resource-group hotel404ResourceGroup --name hotel404AKSCluster --identity
 
       - name: Deploy to AKS
         run: |
