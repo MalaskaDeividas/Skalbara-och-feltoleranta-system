@@ -16,8 +16,7 @@ jobs:
           node-version: 18
 
       - name: Install dependencies
-        working-directory: hotel404/backend
-        run: npm install --force
+        run: cd hotel404/backend && npm install --force
 
       - name: Run Jest tests
         run: npm test
