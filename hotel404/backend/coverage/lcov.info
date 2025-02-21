@@ -1,5 +1,5 @@
 TN:
-SF:src\logger.ts
+SF:src/logger.ts
 FN:12,(anonymous_1)
 FN:25,(anonymous_2)
 FNF:2
@@ -39,7 +39,7 @@ BRF:9
 BRH:7
 end_of_record
 TN:
-SF:src\controllers\auth.ts
+SF:src/controllers/auth.ts
 FN:9,(anonymous_1)
 FNF:1
 FNH:1
