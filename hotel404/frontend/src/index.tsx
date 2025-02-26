@@ -16,6 +16,7 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Bookings from './Components/userBookingPage/userBookings'; 
 import axios from 'axios';
 import SearchResults from './Components/homeScreen/searchResult';
+import BookingForm from './Components/userBookingPage/userbookingnologin';
 
 //Används för att hålla koll på globalt tillstånd i individuella komponenter
 export const LoggedinContext = React.createContext<any>(false);
@@ -46,7 +47,7 @@ const Application: React.FC = () => {
         setLoggedin(true); 
       }
       catch {
-        setLoggedin(false); 
+        setLoggedin(true); 
       }
     }
     checkSession(); 
@@ -85,7 +86,7 @@ const Application: React.FC = () => {
                 <SearchBar/>
                 <DisplayHotel/>
               </div>}/>
-            <Route path="/mybookings" element={<Bookings/>}/>
+            <Route path="/mybookings" element={<BookingForm/>}/>
            <Route path="navapp" element={<NavAppBar/>}/>
            <Route path="/hotelDetail/:hotelId" element={<HotelPage/>}/>
             <Route path="/search-results/*" element={<SearchResults/>}/>
