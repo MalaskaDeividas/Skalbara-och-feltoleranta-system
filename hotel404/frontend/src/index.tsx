@@ -13,7 +13,7 @@ import HotelPage from './Components/hotelPage/hotelPage';
 
 import DisplayHotel from './Components/hotelDisplay/displayHotelCard';
 import {BrowserRouter, Routes, Route} from 'react-router-dom'; 
-import Bookings from './Components/userBookingPage/userBookings'; 
+import Bookings from './Components/userBookingPage/userbookingnologin'; 
 import axios from 'axios';
 import SearchResults from './Components/homeScreen/searchResult';
 import BookingForm from './Components/userBookingPage/userbookingnologin';
@@ -47,62 +47,35 @@ const Application: React.FC = () => {
         setLoggedin(true); 
       }
       catch {
-        setLoggedin(true); 
+        setLoggedin(false); 
       }
     }
     checkSession(); 
   }, []);
 
-  //If user is not logged in, render only login and signup pages 
-  if(!loggedin) {
-    return (
-      <div>
-        <LoggedinContext.Provider value={{loggedin: loggedin, setLoggedin: setLoggedin}}>
-          <UsernameContext.Provider value={{globalUsername, setGlobalUsername}}>
-            <BrowserRouter>
-              <Routes>
-                <Route path="/" element={<Login/>}/>
-                <Route path="/signup" element={<Signup/>}/>
-                <Route path="*" element={<Login/>}/>
-              </Routes>
-            </BrowserRouter>
-          </UsernameContext.Provider>
-        </LoggedinContext.Provider>
-      </div>
-    )
-  }
-
-  //If user is logged in, render the full application
-  else {
-    return (
-      <div>
-      <LoggedinContext.Provider value={{loggedin: loggedin, setLoggedin: setLoggedin}}>
-      <UsernameContext.Provider value={{globalUsername, setGlobalUsername}}>
+  return (
+    <LoggedinContext.Provider value={{ loggedin, setLoggedin }}>
+      <UsernameContext.Provider value={{ globalUsername, setGlobalUsername }}>
         <BrowserRouter>
-        <NavAppBar/>
-        <Routes>
-            <Route path="/" element={
-              <div>
-                <SearchBar/>
-                <DisplayHotel/>
-              </div>}/>
-            <Route path="/mybookings" element={<BookingForm/>}/>
-           <Route path="navapp" element={<NavAppBar/>}/>
-           <Route path="/hotelDetail/:hotelId" element={<HotelPage/>}/>
-            <Route path="/search-results/*" element={<SearchResults/>}/>
-            <Route path="*" element={
-              <div>
-                <SearchBar/>
-                <DisplayHotel/>
-              </div>
-            }/>
+          <NavAppBar />
+          <Routes>
+            <Route path="/" element={<><SearchBar/><DisplayHotel/></>} />
+            <Route path="/hotelDetail/:hotelId" element={<HotelPage />} />
+            <Route path="/search-results/*" element={<SearchResults />} />
+            
+            {/* Allow bookings but show a message if the user is not logged in */}
+            <Route path="/mybookings" element={loggedin ? <BookingForm /> : <Login />} />
+            
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/login" element={<Login />} />
+
+            {/* Fallback route */}
+            <Route path="*" element={<><SearchBar/><DisplayHotel/></>} />
           </Routes>
         </BrowserRouter>
-        </UsernameContext.Provider>
-        </LoggedinContext.Provider>
-      </div>
-    )
-  }
+      </UsernameContext.Provider>
+    </LoggedinContext.Provider>
+  );
 }; 
 
 const root = ReactDOM.createRoot(

@@ -8,14 +8,15 @@ export async function GetBookings() {
 }
 //För att hantera "cancel booking"
 export async function DeleteBooking(id: string){
-  const deleted = await axios.delete("http://localhost:7700/api/booking", {data: {bookingId: id}}); 
+   await axios.delete("http://localhost:7700/api/booking", {data: {bookingId: id}}); 
 }
 //Skapar en bokning med hotell detaljerna samt binder det till användaren som utför bokningen
 export async function CreateBooking(
   hotelId: string,
   user: string,
   from_date:string,
-  to_date: string){
+  to_date: string,
+  email: string) {
 
   await axios.post("http://localhost:7700/api/booking/", {
     hotelID: hotelId,  
@@ -25,6 +26,23 @@ export async function CreateBooking(
 };  
 
 
+
+
 //skapa ny CreateBookingEasy som gör samma som create booking men inte binder det till user utan endast email och tar all user info och sparar det till user.
 // behövs ändring i bookings.ts backend för att det ska funka, även model perhaps.
-export async function CreateBookingEasy (){};
+// Create a booking for guest users
+export async function CreateBookingEasy(
+  hotelId: string,
+  guestName: string,
+  guestEmail: string,
+  from_date: string,
+  to_date: string) {
+
+  await axios.post("http://localhost:7700/api/booking/guest", {
+    hotelID: hotelId,  
+    guestName: guestName,
+    guestEmail: guestEmail,
+    from_date: from_date,
+    to_date: to_date
+  }); 
+}
