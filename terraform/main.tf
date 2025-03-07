@@ -1,6 +1,6 @@
 provider "azurerm" {
   features {}
-  
+
   subscription_id = "b05d73a2-6d14-4c20-8197-d5be19f0c03f"
 }
 
@@ -14,7 +14,7 @@ resource "azurerm_container_registry" "acr" {
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
   sku                 = "Basic"
-  admin_enabled		  = true
+  admin_enabled          = true
 }
 
 resource "azurerm_kubernetes_cluster" "aks" {
@@ -32,7 +32,7 @@ resource "azurerm_kubernetes_cluster" "aks" {
   identity {
     type = "SystemAssigned"
   }
-  
+
    depends_on = [azurerm_container_registry.acr]
 }
 

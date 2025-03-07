@@ -24,3 +24,24 @@ spec:
             limits:
               cpu: "500m"      # Limits to 0.5 CPU cores
               memory: "512Mi"  # Limits to 512 MB of RAM
+              startupProbe:
+                httpGet:
+                  path: /startup
+                  port: 7700
+                initialDelaySeconds: 5
+                periodSeconds: 10
+                failureThreshold: 30
+              readinessProbe:
+                httpGet:
+                  path: /ready
+                  port: 7700
+                initialDelaySeconds: 10
+                periodSeconds: 5
+                failureThreshold: 3
+              livenessProbe:
+                httpGet:
+                  path: /healthz
+                  port: 7700
+                initialDelaySeconds: 15
+                periodSeconds: 10
+                failureThreshold: 3

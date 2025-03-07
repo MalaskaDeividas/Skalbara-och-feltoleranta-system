@@ -29,6 +29,7 @@ app.use(express.json());
 
 // Middleware: Parses cookies from incoming requests
 app.use(cookieParser()); 
+
 // Session middleware: Manages user sessions with settings like expiration
 app.set("trust proxy", 1); 
 app.use(session({
@@ -52,6 +53,34 @@ mongoose.connect(mongoURI)
   .catch(err => {
     console.error('MongoDB connection error:', err);
   });
+
+// Liveness Probe
+app.get("/healthz", (req, res) => {
+  if (mongoose.connection.readyState === 1){
+      res.status(200).send("Ready");
+  }
+  else {
+      res.status(500).send("Not Ready");
+  }
+});
+
+//Startup probe
+app.get("/startup", (req, res)=> {
+  res.status(200).send("Started");
+});
+
+// Readiness Probe
+app.get("/ready", (req, res) => {
+
+  if (mongoose.connection.readyState === 1){
+      res.status(200).send("Ready");
+  }
+  else {
+      res.status(500).send("Not Ready");
+  }
+
+
+});
 
 // Route handling
 app.use("/api/hotels", hotelRouter); 
