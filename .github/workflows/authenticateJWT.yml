@@ -15,8 +15,17 @@ jobs:
         with:
           node-version: 18
 
-      - name: Install dependencies
+      # Install dependencies in the backend directory
+      - name: Install Backend Dependencies
         run: npm install
+        working-directory: ./hotel404/backend
 
+      # Install dependencies in the frontend directory
+      - name: Install Frontend Dependencies
+        run: npm install
+        working-directory: ./hotel404/frontend
+
+      # Run Jest tests in the backend directory
       - name: Run Jest tests
         run: npm test
+        working-directory: ./hotel404/backend

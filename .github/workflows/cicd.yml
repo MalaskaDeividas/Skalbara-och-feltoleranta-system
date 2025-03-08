@@ -5,37 +5,60 @@ on:
     branches:
       - '**'
 
+
+env:
+  REGISTRY_USERNAME: ${{ secrets.DEIVIDOCKER_USERNAME }} # Docker Hub Username
+  DEPLOYMENT_NAME: hotel404-microservice
+  K8S_SERVER: ${{ secrets.K8S_SERVER }}
+
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v2
-
       - name: Login to Docker Hub
-        run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin
+        run: echo "${{ secrets.DEIVIDOCKER_PASSWORD }}" | docker login -u ${{ env.REGISTRY_USERNAME }} --password-stdin
 
-      - name: Build and push Docker image
+      - name: Build and push backend
         run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/hotel404-microservice:${{ github.sha }} -f hotel404/backend/Dockerfile hotel404/backend/
-          docker push ${{ secrets.DOCKER_USERNAME }}/hotel404-microservice:${{ github.sha }}
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/hotel404-microservice:${{ github.sha }} -f hotel404/frontend/Dockerfile hotel404/frontend/
-          docker push ${{ secrets.DOCKER_USERNAME }}/hotel404-microservice:${{ github.sha }}
+          docker build -t ${{ env.REGISTRY_USERNAME }}/hotel404-backend:${{ github.sha }} -f hotel404/backend/Dockerfile hotel404/backend/
+          docker push ${{ env.REGISTRY_USERNAME }}/hotel404-backend:${{ github.sha }}
 
+      - name: Build and push frontend
+        run: |
+          docker build -t ${{ env.REGISTRY_USERNAME }}/hotel404-frontend:${{ github.sha }} -f hotel404/frontend/Dockerfile hotel404/frontend/
+          docker push ${{ env.REGISTRY_USERNAME }}/hotel404-frontend:${{ github.sha }}
+
+
+      - name: Configure Kubernetes
+        run: |
+          # Create kubeconfig using ServiceAccount token
+          kubectl config set-cluster k8s \
+            --server=$K8S_SERVER \
+            --certificate-authority=<(echo "${{ secrets.K8S_CA_CRT }}")
+          kubectl config set-credentials github-actions \
+            --token=${{ secrets.K8S_TOKEN }}
+          kubectl config set-context k8s \
+            --cluster=k8s \
+            --user=github-actions
+          kubectl config use-context k8s
+
+      - name: Deploy to Kubernetes
+        run: |
+          # Update both backend and frontend deployments
+          kubectl set image deployment/hotel404-backend hotel404-backend=${{ env.REGISTRY_USERNAME }}/hotel404-backend:${{ github.sha }}
+          kubectl set image deployment/hotel404-frontend hotel404-frontend=${{ env.REGISTRY_USERNAME }}/hotel404-frontend:${{ github.sha }}
+          
       - name: Set up Kubernetes
-        uses: azure/setup-kubectl@v3
-
-      - name: Login to Azure
-        run: az login --use-device-code
-
-      - name: Get AKS credentials
-        run: az aks get-credentials --resource-group hotel404ResourceGroup --name hotel404AKSCluster
+        uses: tale/kubectl-action@v1
+        with:
+          base64-kube-config: ${{ secrets.KUBE_CONFIG }}
+          kubectl-version: v1.24.2
 
       - name: Deploy to AKS
         run: |
           kubectl apply -f .github/workflows/deployment.yaml
-          kubectl set image deployment/hotel404-microservice hotel404-microservice=${{ secrets.DOCKER_USERNAME }}/hotel404-microservice:${{ github.sha }}
+          kubectl set image deployment/hotel404-microservice hotel404-microservice=${{ secrets.DEIVIDOCKER_USERNAME }}/hotel404-microservice:${{ github.sha }}

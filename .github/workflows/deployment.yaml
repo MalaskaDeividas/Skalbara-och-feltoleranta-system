@@ -1,47 +1,38 @@
+# k8s/backend-deployment.yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hotel404-microservice
+  name: hotel404-backend
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
-      app: hotel404-microservice
+      app: hotel404-backend
   template:
     metadata:
       labels:
-        app: hotel404-microservice
+        app: hotel404-backend
     spec:
       containers:
-        - name: hotel404-microservice
-          image: myregistry.azurecr.io/hotel404-microservice:latest
-          ports:
-            - containerPort: 3000
-          resources:
-            requests:
-              cpu: "250m"      # Requests 0.25 CPU cores
-              memory: "256Mi"  # Requests 256 MB of RAM
-            limits:
-              cpu: "500m"      # Limits to 0.5 CPU cores
-              memory: "512Mi"  # Limits to 512 MB of RAM
-              startupProbe:
-                httpGet:
-                  path: /startup
-                  port: 7700
-                initialDelaySeconds: 5
-                periodSeconds: 10
-                failureThreshold: 30
-              readinessProbe:
-                httpGet:
-                  path: /ready
-                  port: 7700
-                initialDelaySeconds: 10
-                periodSeconds: 5
-                failureThreshold: 3
-              livenessProbe:
-                httpGet:
-                  path: /healthz
-                  port: 7700
-                initialDelaySeconds: 15
-                periodSeconds: 10
-                failureThreshold: 3
+      - name: hotel404-backend
+        image: $REGISTRY_USERNAME/hotel404-backend:$IMAGE_TAG
+        resources:
+          requests:
+            cpu: "100m"
+            memory: "128Mi"
+          limits:
+            cpu: "500m"
+            memory: "256Mi"
+        ports:
+        - containerPort: 8080
+        # Add these if you have health checks
+        # livenessProbe:
+        #   httpGet:
+        #     path: /healthz
+        #     port: 8080
+        # readinessProbe:
+        #   httpGet:
+        #     path: /readyz
+        #     port: 8080
+      imagePullSecrets:
+      - name: dockerhub-creds  # If using private Docker Hub repo
