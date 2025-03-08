@@ -27,13 +27,10 @@ jobs:
           docker push ${{ secrets.DEIVIDOCKER_USERNAME }}/hotel404-microservice:${{ github.sha }}
 
       - name: Set up Kubernetes
-        uses: azure/setup-kubectl@v3
-
-      - name: Login to Azure
-        run: az login --use-device-code
-
-      - name: Get AKS credentials
-        run: az aks get-credentials --resource-group hotel404ResourceGroup --name hotel404AKSCluster
+        uses: tale/kubectl-action@v1
+        with:
+          base64-kube-config: ${{ secrets.KUBE_CONFIG }}
+          kubectl-version: v1.24.2
 
       - name: Deploy to AKS
         run: |
