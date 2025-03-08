@@ -25,6 +25,12 @@ jobs:
         run: npm install
         working-directory: ./hotel404/frontend
 
-
-      - name: Run Jest tests
+      # Run Jest tests in the backend directory
+      - name: Run Backend Jest tests
         run: npm test
+        working-directory: ./hotel404/backend
+
+      # Run Jest tests in the frontend directory
+      - name: Run Frontend Jest tests
+        run: npm test
+        working-directory: ./hotel404/frontend
