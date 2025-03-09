@@ -44,10 +44,6 @@ jobs:
           echo "${{ secrets.KUBE_CONFIG }}" | base64 -d > ~/.kube/config
           kubectl config use-context hotel404AKSCluster
 
-      # Verify connection
-      - name: Check cluster connection
-        run: kubectl cluster-info
-
       # First apply deployment manifests to create resources
       - name: Apply Kubernetes manifests
         run: kubectl apply -f ./k8s/ # Path to our manifests in k8s folder
