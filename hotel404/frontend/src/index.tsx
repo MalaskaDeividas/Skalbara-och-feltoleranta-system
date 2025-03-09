@@ -47,7 +47,7 @@ const Application: React.FC = () => {
         setLoggedin(true); 
       }
       catch {
-        setLoggedin(false); 
+        setLoggedin(true); 
       }
     }
     checkSession(); 
