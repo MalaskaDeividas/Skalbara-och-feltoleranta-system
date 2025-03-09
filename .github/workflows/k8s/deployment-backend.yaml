@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hotel404-backend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: hotel404-backend
+  template:
+    metadata:
+      labels:
+        app: hotel404-backend
+    spec:
+      containers:
+      - name: hotel404-backend
+        image: DEIVIDOCKER_USERNAME/hotel404-backend:latest
+        ports:
+        - containerPort: 3000
