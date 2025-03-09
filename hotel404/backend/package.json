@@ -4,6 +4,7 @@
   "main": "./src/index.js",
   "type": "module",
   "scripts": {
+    "start": "tsx src/index.ts",
     "test": "jest --coverage"
   },
   "keywords": [],
