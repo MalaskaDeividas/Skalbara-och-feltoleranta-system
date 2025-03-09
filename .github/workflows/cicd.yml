@@ -35,14 +35,18 @@ jobs:
       - name: Set up Kubernetes
         uses: azure/setup-kubectl@v3
         with:
-          kubectl-version: "v1.24.2"
+          version: "v1.24.2"
 
       # Configure kubeconfig from secret
       - name: Configure Kubernetes context
         run: |
           mkdir -p ~/.kube
           echo "${{ secrets.KUBE_CONFIG }}" | base64 -d > ~/.kube/config
-          kubectl config use-context ${{ secrets.K8S_CONTEXT_NAME }}
+          kubectl config use-context hotel404AKSCluster
+
+      # Verify connection
+      - name: Check cluster connection
+        run: kubectl cluster-info
 
       # First apply deployment manifests to create resources
       - name: Apply Kubernetes manifests
