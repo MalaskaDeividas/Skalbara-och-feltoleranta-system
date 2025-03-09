@@ -48,7 +48,7 @@ jobs:
       - name: Apply Kubernetes manifests
         run: kubectl apply -f ./k8s/ # Path to our manifests in k8s folder
 
-      # # Update container images
+      # Update container images
       # - name: Update deployments
       #   run: |
       #     kubectl set image deployment/hotel404-backend hotel404-backend=${{ env.REGISTRY_USERNAME }}/hotel404-backend:${{ github.sha }}
