@@ -86,7 +86,7 @@ const NavAppBar = () => {
 
     // Goes back to the front page.
     const handleBackToIndexClick = () => {
-        navigate('/');
+        navigate('/', { replace: true });
     }
  
     return (
@@ -95,7 +95,7 @@ const NavAppBar = () => {
                 {/* Left side, logo and name*/}
                 <Box display={"flex"} alignItems={"center"} flexGrow={1}>
                     <ApartmentIcon style={{height: '40px', marginRight: '10px' }} sx={{fontSize: 30}}/>
-                    <Typography variant='h6' component={"div"} fontSize={30} fontWeight={"bold"} onClick={handleBackToIndexClick} style={{cursor:'pointer'}}>
+                    <Typography variant='h6' component={"div"} fontSize={30} fontWeight={"bold"} onClick={handleBackToIndexClick} style={{cursor:'pointer', userSelect: 'none'}}>
                         HOTEL-404
                     </Typography>
                 </Box>

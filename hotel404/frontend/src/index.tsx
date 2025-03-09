@@ -17,6 +17,7 @@ import Bookings from './Components/userBookingPage/userbookingnologin';
 import axios from 'axios';
 import SearchResults from './Components/homeScreen/searchResult';
 import BookingForm from './Components/userBookingPage/userbookingnologin';
+import BookingConfirmation from './Components/userBookingPage/Confirmation'
 
 //Används för att hålla koll på globalt tillstånd i individuella komponenter
 export const LoggedinContext = React.createContext<any>(false);
@@ -44,10 +45,10 @@ const Application: React.FC = () => {
 
       try{
         const session = await axios.get("http://localhost:7700/api/user/session");    
-        setLoggedin(true); 
+        setLoggedin(false); 
       }
       catch {
-        setLoggedin(true); 
+        setLoggedin(false); 
       }
     }
     checkSession(); 
@@ -65,6 +66,7 @@ const Application: React.FC = () => {
             
             {/* Allow bookings but show a message if the user is not logged in */}
             <Route path="/mybookings" element={loggedin ? <BookingForm /> : <Login />} />
+            <Route path="/booking-confirmation" element={<BookingConfirmation />} />
             
             <Route path="/signup" element={<Signup />} />
             <Route path="/login" element={<Login />} />

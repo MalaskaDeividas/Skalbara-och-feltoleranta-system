@@ -1,40 +1,90 @@
-import { deleteBooking, createBooking, getBookingForUser } from "../controllers/booking";
-import { authenticateJWT } from "../controllers/auth";
-import express from 'express';
-
-const bookingRouter = express.Router();
-// Route to create a booking with JWT authentication
-bookingRouter.post("/", authenticateJWT, async function(req, res){
-    const hotelID = req.body.hotelID;
-    const user = req.user;
-    const from_date = req.body.from_date;
-    const to_date = req.body.to_date;
-    console.log(hotelID, user, from_date, to_date); 
+import { 
+    deleteBooking, 
+    createBooking, 
+    getBookingForUser,
+    createGuestBooking 
+  } from "../controllers/booking";
+  import { authenticateJWT } from "../controllers/auth";
+  import express from 'express';
+  
+  const bookingRouter = express.Router();
+  
+  // Authenticated user booking
+  bookingRouter.post("/", authenticateJWT, async (req, res) => {
     try {
-        const bookingDone = await createBooking(hotelID, user, from_date, to_date);
-        res.status(201).send("booking successful!");
-    } catch (error){
-        res.status(400).send(error);
+      const booking = await createBooking(
+        req.body.hotelID,
+        req.user, // From JWT
+        req.body.from_date,
+        req.body.to_date
+      );
+      
+      res.status(201).json({
+        success: true,
+        bookingId: booking._id,
+        cost: booking.cost
+      });
+    } catch (error) {
+      res.status(400).json({
+        success: false,
+        error: error instanceof Error ? error.message : "Booking failed"
+      });
     }
-});
-// Route to delete a booking by ID
-bookingRouter.delete("/", async function(req, res) {
-
-    const bookingId = req.body.bookingId;
-
+  });
+  
+  // Guest booking (no authentication required)
+  bookingRouter.post("/guest", async (req, res) => {
     try {
-        const bookingDeleted = await deleteBooking(bookingId);
-        res.status(200).send();
-    } catch {
-        res.status(400).send();
+      const booking = await createGuestBooking(
+        req.body.hotelID,
+        {
+          firstName: req.body.firstName,
+          lastName: req.body.lastName,
+          email: req.body.email,
+          phone: req.body.phone,
+          country: req.body.country
+        },
+        req.body.from_date,
+        req.body.to_date
+      );
+  
+      res.status(201).json({
+        success: true,
+        bookingId: booking._id,
+        cost: booking.cost
+      });
+    } catch (error) {
+      res.status(400).json({
+        success: false,
+        error: error instanceof Error ? error.message : "Guest booking failed"
+      });
     }
-});
-// Route to get bookings for the authenticated user
-bookingRouter.get("/", authenticateJWT, async function(req, res){
-  const username = req.user; 
-  const bookings = await getBookingForUser(username);
-  console.log(bookings); 
-  res.send(bookings).status(200); 
-})
-
-export default bookingRouter;
+  });
+  
+  // Delete booking (authenticated users only)
+  bookingRouter.delete("/:id", authenticateJWT, async (req, res) => {
+    try {
+      await deleteBooking(req.params.id);
+      res.status(200).json({ success: true });
+    } catch (error) {
+      res.status(400).json({
+        success: false,
+        error: error instanceof Error ? error.message : "Delete failed"
+      });
+    }
+  });
+  
+  // Get user bookings
+  bookingRouter.get("/", authenticateJWT, async (req, res) => {
+    try {
+      const bookings = await getBookingForUser(req.user);
+      res.status(200).json({ success: true, bookings });
+    } catch (error) {
+      res.status(500).json({
+        success: false,
+        error: error instanceof Error ? error.message : "Failed to get bookings"
+      });
+    }
+  });
+  
+  export default bookingRouter;

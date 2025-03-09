@@ -1,6 +1,111 @@
-import { Booking } from "../Model/Booking"; 
+// Controller/BookingController.ts
+import { Booking } from "../Model/Booking";
 import { Hotel } from "../Model/HotelModel";
+import { PopulatedDoc } from 'mongoose';
 
+interface PopulatedHotel {
+  display?: {
+    title?: string;
+    price?: number;
+    // Add other display properties if needed
+  };
+  // Add other hotel properties if needed
+}
+
+// Define the populated booking type
+interface PopulatedBooking {
+  _id: string;
+  hotel: PopulatedDoc<PopulatedHotel>;
+  user: string;
+  to_date: Date;
+  from_date: Date;
+  cost: number;
+}
+
+const validateBookingDates = (fromDate: Date, toDate: Date) => {
+  const timeNow = Date.now();
+  const days = Math.round((toDate.getTime() - fromDate.getTime()) / (1000 * 3600 * 24));
+  
+  if (days < 0) throw new Error("Invalid dates");
+  if (fromDate.getTime() < timeNow || toDate.getTime() < timeNow) {
+    throw new Error("Dates cannot be in the past");
+  }
+};
+
+const calculateBookingCost = async (hotelID: string, days: number) => {
+  const hotel = await Hotel.findById(hotelID);
+  if (!hotel) throw new Error("Hotel not found");
+  if (!hotel.display?.price) throw new Error("Hotel price not available");
+  return hotel.display.price * days;
+};
+
+export const createBooking = async (
+  hotelID: string,
+  user: string,
+  from_date: string,
+  to_date: string
+) => {
+  const date1 = new Date(from_date);
+  const date2 = new Date(to_date);
+  validateBookingDates(date1, date2);
+  
+  const days = Math.round((date2.getTime() - date1.getTime()) / (1000 * 3600 * 24));
+  const cost = await calculateBookingCost(hotelID, days);
+
+  return Booking.create({
+    hotel: hotelID,
+    user,
+    from_date: date1,
+    to_date: date2,
+    cost,
+    isGuestBooking: false
+  });
+};
+
+export const createGuestBooking = async (
+  hotelID: string,
+  guestDetails: {
+    firstName: string;
+    lastName: string;
+    email: string;
+    phone: string;
+    country: string;
+  },
+  from_date: string,
+  to_date: string
+) => {
+  const date1 = new Date(from_date);
+  const date2 = new Date(to_date);
+  validateBookingDates(date1, date2);
+
+  const days = Math.round((date2.getTime() - date1.getTime()) / (1000 * 3600 * 24));
+  const cost = await calculateBookingCost(hotelID, days);
+
+  return Booking.create({
+    hotel: hotelID,
+    guestDetails,
+    from_date: date1,
+    to_date: date2,
+    cost,
+    isGuestBooking: true
+  });
+};
+
+// Function to retrieve bookings for a specific user
+export async function getBookingForUser(username: string) {
+  const bookings = await Booking.find({ user: username })
+    .populate<{ hotel: typeof Hotel }>('hotel')
+    .lean()
+    .exec();
+
+  return bookings.map(booking => ({
+    id: booking._id.toString(),
+    user: booking.user,
+    to_date: booking.to_date.toISOString().split('T')[0],
+    from_date: booking.from_date.toISOString().split('T')[0],
+    cost: booking.cost
+  }));
+}
 
 // Function to delete a booking by its ID
 export async function deleteBooking(bookingId: string) {
@@ -21,92 +126,4 @@ export async function deleteBooking(bookingId: string) {
         }
         throw error;
     }
-}
-// Function to create a new booking
-export async function createBooking(hotelID: string, user: string, from_date: string, to_date: string){ 
-  let date1 = new Date(from_date); 
-  let date2 = new Date(to_date); 
-  let days = Math.round((date2.getTime()-date1.getTime()) /(1000*3600*24));
-  let hotel = await Hotel.findById(hotelID);
-  const timeNow = Date.now(); 
-  
-  const checkInDate = date1.toISOString().split('T')[0]; 
-  const checkOutDate = date2.toISOString().split('T')[0]; 
-  //If checkout date is less than checkin date, throw an error
-  //Also throw an error if either date is before the current time
-  if(days < 0){
-    throw new Error("invalid dates"); 
-  } else if(Number(date1) < timeNow || Number(date2) < timeNow){
-    throw new Error("invalid dates"); 
-  }
-  if(!hotel){
-    throw new Error("couldn't find hotel");
-  }
-  const cost = hotel.display?.price;
-  if(!cost){
-    throw new Error("Couldn't get hotel price"); 
-  }
-  const calculatedCost = cost * days; 
-  await Booking.create({
-    hotel: hotelID, 
-    user: user, 
-    from_date: checkInDate, 
-    to_date: checkOutDate,
-    cost: calculatedCost
-  });
-}
-
-// Function to create a new booking for guest users
-export async function createGuestBooking(hotelID: string, guestName: string, guestEmail: string, from_date: string, to_date: string) {
-  let date1 = new Date(from_date);
-  let date2 = new Date(to_date);
-  let days = Math.round((date2.getTime() - date1.getTime()) / (1000 * 3600 * 24));
-  let hotel = await Hotel.findById(hotelID);
-  const timeNow = Date.now();
-
-  const checkInDate = date1.toISOString().split('T')[0];
-  const checkOutDate = date2.toISOString().split('T')[0];
-
-  if (days < 0 || Number(date1) < timeNow || Number(date2) < timeNow) {
-      throw new Error("Invalid dates");
-  }
-  if (!hotel) {
-      throw new Error("Couldn't find hotel");
-  }
-  const cost = hotel.display?.price;
-  if (!cost) {
-      throw new Error("Couldn't get hotel price");
-  }
-  const calculatedCost = cost * days;
-
-  await Booking.create({
-      hotel: hotelID,
-      guestName: guestName,
-      guestEmail: guestEmail,
-      from_date: checkInDate,
-      to_date: checkOutDate,
-      cost: calculatedCost
-  });
-}
-
-// Function to retrieve bookings for a specific user
-export async function getBookingForUser(username: string) {
-  console.log(username); 
-  const bookings = await Booking.find({user: username});
-  console.log(bookings);
-  var formattedBookings = []
-  for(let booking of bookings) {
-    console.log(booking); 
-    const hotel = await Hotel.findById(booking.hotel);
-    const formattedBooking = {
-      id: booking.id,
-      hotel: hotel?.display?.title, 
-      user: booking.user, 
-      to_date: booking.to_date.split("T")[0], 
-      from_date: booking.from_date.split("T")[0], 
-      cost: booking.cost
-    }; 
-    formattedBookings.push(formattedBooking); 
-  }
-  return formattedBookings; 
 }
