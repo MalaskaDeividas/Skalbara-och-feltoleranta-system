@@ -24,6 +24,10 @@ Backend:
 [If it shows a process, kill it with:]
 - Stop-Process -Id (Get-NetTCPConnection -LocalPort 7700).OwningProcess -Force
 
+# Testing
+
+Added testing CI/CD using Managed identities in Azure
+
 
 
 
