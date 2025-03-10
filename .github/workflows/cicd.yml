@@ -58,7 +58,7 @@ jobs:
 
       # Apply Kubernetes manifests
       - name: Apply Kubernetes manifests
-        run: kubectl apply -f ./k8s/
+        run: kubectl apply -f ./github/workflows/k8s/
 
       # Update container images
       - name: Deploy to Kubernetes
