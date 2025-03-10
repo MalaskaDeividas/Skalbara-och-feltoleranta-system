@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hotel404-microservice
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hotel404-microservice
+  template:
+    metadata:
+      labels:
+        app: hotel404-microservice
+    spec:
+      containers:
+        - name: hotel404-microservice
+          image: DeividasMalaska/hotel404-microservice:latest
+          ports:
+            - containerPort: 8080
+          resources:
+            requests:
+              cpu: "250m"   # Minimum 0.25 CPU (250 millicores)
+              memory: "512Mi"  # Minimum 512MB RAM
+            limits:
+              cpu: "500m"   # Maximum 0.5 CPU
+              memory: "1Gi"  # Maximum 1GB RAM

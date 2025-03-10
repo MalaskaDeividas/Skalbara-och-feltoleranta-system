@@ -17,3 +17,10 @@ spec:
         image: DEIVIDOCKER_USERNAME/hotel404-frontend:latest
         ports:
         - containerPort: 80
+        resources:
+          requests:
+            cpu: "100m"   # Minimum 0.25 CPU (250 millicores)
+            memory: "256Mi"  # Minimum 512MB RAM
+          limits:
+            cpu: "250m"   # Maximum 0.5 CPU
+            memory: "512Mi"  # Maximum 1GB RAM
