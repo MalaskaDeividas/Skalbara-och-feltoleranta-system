@@ -20,7 +20,7 @@ const app = express();
 
 // CORS middleware: Handles cross-origin resource sharing
 app.use(cors({
-  origin: "http://localhost:3000", 
+  origin: "http://9.223.153.191:80", // frontend IP
   credentials: true
 })); 
 // Parse incoming JSON request.
@@ -94,6 +94,6 @@ app.use((req, _, next) => {
 }); 
 
 // Start server on port 7700
-app.listen(7700, "0.0.0.0", () => {
+app.listen(7700, "http://9.223.187.114" , () => {
   console.log("Listening on port 7700"); 
 }); 

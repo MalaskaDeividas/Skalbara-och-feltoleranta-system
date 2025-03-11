@@ -8,6 +8,6 @@ spec:
     app: hotel404-backend
   ports:
     - protocol: TCP
-      port: 3000
-      targetPort: 3000
+      port: 7700
+      targetPort: 7700
   type: ClusterIP

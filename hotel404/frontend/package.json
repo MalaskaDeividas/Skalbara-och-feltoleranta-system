@@ -21,6 +21,8 @@
     "axios": "^1.7.7",
     "date-fns": "^3.6.0",
     "hotel-404": "file:",
+    "nginx": "^1.0.8",
+    "nginxc": "^1.0.0",
     "react": "^18.3.1",
     "react-date-range": "^2.0.1",
     "react-dom": "^18.3.1",
@@ -63,5 +65,10 @@
     "globals": "^15.9.0",
     "react-router-dom": "^6.26.2",
     "typescript-eslint": "^8.5.0"
-  }
+  },
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }

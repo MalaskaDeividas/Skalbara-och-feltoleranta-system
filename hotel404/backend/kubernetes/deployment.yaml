@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hotel404-backend
+  namespace: hotel404
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hotel404-backend
+  template:
+    metadata:
+      labels:
+        app: hotel404-backend
+    spec:
+      containers:
+      - name: hotel404-backend
+        image: deividasmalaska/hotel404-backend:latest  # Use the correct image here
+        imagePullPolicy: IfNotPresent
+        ports:
+          - containerPort: 7700   # NGINX listens on port 80 (per your Dockerfile)
+        resources:
+          requests:
+            cpu: 126m
+            memory: 256Mi
+          limits:
+            cpu: 256m
+            memory: 512Mi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: hotel404-backend
+spec:
+  selector:
+    app: hotel404-backend
+  type: LoadBalancer
+  ports:
+    - protocol: TCP
+      port: 80      # External port to reach the service
+      targetPort: 7700    # Matches containerPort (NGINX)

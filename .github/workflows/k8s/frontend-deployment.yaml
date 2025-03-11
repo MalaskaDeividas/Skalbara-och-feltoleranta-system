@@ -17,7 +17,7 @@ spec:
       - name: hotel404-frontend
         image: deividasmalaska/hotel404-frontend:latest
         ports:
-        - containerPort: 80
+        - containerPort: 3000
         resources:
           requests:
             cpu: "100m"
