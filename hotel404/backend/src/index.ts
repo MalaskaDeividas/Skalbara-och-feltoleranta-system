@@ -94,6 +94,6 @@ app.use((req, _, next) => {
 }); 
 
 // Start server on port 7700
-app.listen(7700, () => {
+app.listen(7700, "0.0.0.0", () => {
   console.log("Listening on port 7700"); 
 }); 
