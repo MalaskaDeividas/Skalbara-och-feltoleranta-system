@@ -27,3 +27,4 @@ spec:
             memory: "512Mi"
       imagePullSecrets:
         - name: dockerhub-secret
+ 
