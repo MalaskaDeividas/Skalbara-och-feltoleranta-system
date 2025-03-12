@@ -1,0 +1,12 @@
+docker build -t deividasmalaska/hotel404-backend:latest .
+docker push deividasmalaska/hotel404-backend:latest
+
+kubectl apply -f deployment.yaml 
+
+
+## frontend 
+
+docker build -t deividasmalaska/hotel404-frontend:latest .
+docker push deividasmalaska/hotel404-frontend:latest
+
+kubectl apply -f deployment.yaml 

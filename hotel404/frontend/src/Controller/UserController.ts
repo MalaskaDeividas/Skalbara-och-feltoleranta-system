@@ -7,7 +7,7 @@ export async function VerifyUser (username: string, password:string): Promise<bo
 {
   try 
   {
-    const respone = await axios.post('http://localhost:7700/api/user/login', {
+    const respone = await axios.post('http://9.223.172.61:7700/api/user/login', {
       username: username,
       password: password
     });
@@ -29,7 +29,7 @@ export async function CreateUser (name:string, lastname:string, username:string,
 {
   try 
   {
-    const respone = await axios.post('http://localhost:7700/api/user/signup',{
+    const respone = await axios.post('http://9.223.172.61:7700/api/user/signup',{
       username: username,
       password: password,
       name: name,
@@ -48,7 +48,7 @@ export async function CreateUser (name:string, lastname:string, username:string,
 export async function DeleteUser(username: string) {
   try {
     console.log(username); 
-    const response = await axios.delete('http://localhost:7700/api/user/deleteme', {
+    const response = await axios.delete('http://9.223.172.61:7700/api/user/deleteme', {
       data: {username: username}
     });
     console.log("Deletion of user successful", response.data);
@@ -61,7 +61,7 @@ export async function DeleteUser(username: string) {
 
 export async function LogOut() {
   try {
-    const response = await axios.get('http://localhost:7700/api/user/logout');
+    const response = await axios.get('http://9.223.172.61:7700/api/user/logout');
     console.log("Logout successful");
     return true;
   } catch (error) {

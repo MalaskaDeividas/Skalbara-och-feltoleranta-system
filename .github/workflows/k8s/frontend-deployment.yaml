@@ -2,8 +2,9 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: hotel404-frontend
+  namespace: hotel404
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: hotel404-frontend
@@ -14,13 +15,16 @@ spec:
     spec:
       containers:
       - name: hotel404-frontend
-        image: DEIVIDOCKER_USERNAME/hotel404-frontend:latest
+        image: deividasmalaska/hotel404-frontend:latest
         ports:
-        - containerPort: 80
+        - containerPort: 3000
         resources:
           requests:
-            cpu: "100m"   # Minimum 0.25 CPU (250 millicores)
-            memory: "256Mi"  # Minimum 512MB RAM
+            cpu: "100m"
+            memory: "256Mi"
           limits:
-            cpu: "250m"   # Maximum 0.5 CPU
-            memory: "512Mi"  # Maximum 1GB RAM
+            cpu: "250m"
+            memory: "512Mi"
+      imagePullSecrets:
+        - name: dockerhub-secret
+ 
