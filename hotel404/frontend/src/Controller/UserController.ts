@@ -61,7 +61,7 @@ export async function DeleteUser(username: string) {
 
 export async function LogOut() {
   try {
-    const response = await axios.get('http://9.223.187.114:7700/api/user/logout');
+    const response = await axios.get('http://9.223.187.114/api/user/logout');
     console.log("Logout successful");
     return true;
   } catch (error) {
