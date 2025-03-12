@@ -2,8 +2,9 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: hotel404-backend
+  namespace: hotel404
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: hotel404-backend
@@ -14,13 +15,15 @@ spec:
     spec:
       containers:
       - name: hotel404-backend
-        image: DEIVIDOCKER_USERNAME/hotel404-backend:latest
+        image: deividasmalaska/hotel404-backend:latest
         ports:
-        - containerPort: 3000
+        - containerPort: 7700
         resources:
           requests:
-            cpu: "250m"   # Minimum 0.25 CPU (250 millicores)
-            memory: "512Mi"  # Minimum 512MB RAM
+            cpu: "250m"
+            memory: "512Mi"
           limits:
-            cpu: "500m"   # Maximum 0.5 CPU
-            memory: "1Gi"  # Maximum 1GB RAM
+            cpu: "500m"
+            memory: "1Gi"
+      imagePullSecrets:
+        - name: dockerhub-secret

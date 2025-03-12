@@ -8,6 +8,10 @@ import bookingRouter from "./Routers/bookingRouter";
 import cors from 'cors';
 import session from "express-session";
 import cookieParser from "cookie-parser"; 
+import logger from './logger.js';
+
+// Now you can use the logger throughout your app:
+logger.info("Application is starting...");
 
 declare module 'express-session' {
   export interface SessionData {
@@ -18,11 +22,17 @@ declare module 'express-session' {
 // Express server initialization
 const app = express(); 
 
-// CORS middleware: Handles cross-origin resource sharing
 app.use(cors({
-  origin: "http://localhost:3000", 
+  origin: ["http://9.223.153.191", "http://9.223.172.61"], // Allow both with and without :80
   credentials: true
-})); 
+}));
+
+
+// CORS middleware: Handles cross-origin resource sharing
+/* app.use(cors({
+  origin: "http://9.223.153.191:80", // frontend IP
+  credentials: true
+}));  */
 // Parse incoming JSON request.
 // Middleware: Parses incoming JSON requests
 app.use(express.json());
@@ -94,6 +104,6 @@ app.use((req, _, next) => {
 }); 
 
 // Start server on port 7700
-app.listen(7700, () => {
+app.listen(7700, "0.0.0.0" , () => {
   console.log("Listening on port 7700"); 
 }); 
