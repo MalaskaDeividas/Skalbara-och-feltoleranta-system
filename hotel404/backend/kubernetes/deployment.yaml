@@ -37,5 +37,5 @@ spec:
   type: LoadBalancer
   ports:
     - protocol: TCP
-      port: 80      # External port to reach the service
+      port: 7700      # External port to reach the service
       targetPort: 7700    # Matches containerPort (NGINX)

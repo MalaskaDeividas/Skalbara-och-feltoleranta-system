@@ -41,7 +41,7 @@ const Application: React.FC = () => {
     const checkSession = async () => {
       try {
         // Check if the user is already logged in by making an API request
-        await axios.get("http://9.223.187.114/api/user/session"); // backend url correct
+        await axios.get("http://9.223.172.61:7700/api/user/session"); // backend url correct // backend 9.223.187.114:7700
         setLoggedin(true);
       } catch {
         setLoggedin(false);

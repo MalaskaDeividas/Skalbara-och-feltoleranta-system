@@ -8,6 +8,10 @@ import bookingRouter from "./Routers/bookingRouter";
 import cors from 'cors';
 import session from "express-session";
 import cookieParser from "cookie-parser"; 
+import logger from './logger.js';
+
+// Now you can use the logger throughout your app:
+logger.info("Application is starting...");
 
 declare module 'express-session' {
   export interface SessionData {
@@ -19,7 +23,7 @@ declare module 'express-session' {
 const app = express(); 
 
 app.use(cors({
-  origin: ["http://9.223.153.191", "http://9.223.153.191:80"], // Allow both with and without :80
+  origin: ["http://9.223.153.191", "http://9.223.172.61"], // Allow both with and without :80
   credentials: true
 }));
 

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1740143288531" clover="3.2.0">
-  <project timestamp="1740143288531" name="All files">
+<coverage generated="1741741126046" clover="3.2.0">
+  <project timestamp="1741741126046" name="All files">
     <metrics statements="31" coveredstatements="30" conditionals="11" coveredconditionals="9" methods="3" coveredmethods="3" elements="45" coveredelements="42" complexity="0" loc="31" ncloc="31" packages="2" files="2" classes="2"/>
     <package name="src">
       <metrics statements="18" coveredstatements="17" conditionals="9" coveredconditionals="7" methods="2" coveredmethods="2"/>
-      <file name="logger.ts" path="/home/deividas/School/Prog/WPWorkshop/Scalable/hotel404/backend/src/logger.ts">
+      <file name="logger.ts" path="C:\Users\ghadi\Documents\Skalbara-och-feltoleranta-system\hotel404\backend\src\logger.ts">
         <metrics statements="18" coveredstatements="17" conditionals="9" coveredconditionals="7" methods="2" coveredmethods="2"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -28,7 +28,7 @@
     </package>
     <package name="src.controllers">
       <metrics statements="13" coveredstatements="13" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
-      <file name="auth.ts" path="/home/deividas/School/Prog/WPWorkshop/Scalable/hotel404/backend/src/controllers/auth.ts">
+      <file name="auth.ts" path="C:\Users\ghadi\Documents\Skalbara-och-feltoleranta-system\hotel404\backend\src\controllers\auth.ts">
         <metrics statements="13" coveredstatements="13" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
