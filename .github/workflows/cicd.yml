@@ -65,4 +65,3 @@ jobs:
         run: |
           kubectl set image deployment/hotel404-backend hotel404-backend=${{ env.REGISTRY_USERNAME }}/hotel404-backend:${{ github.sha }}
           kubectl set image deployment/hotel404-frontend hotel404-frontend=${{ env.REGISTRY_USERNAME }}/hotel404-frontend:${{ github.sha }}
-          kubectl set image deployment/hotel404-microservice hotel404-microservice=${{ env.REGISTRY_USERNAME }}/hotel404-microservice:${{ github.sha }}
