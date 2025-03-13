@@ -13,17 +13,17 @@ import logger from './logger.js';
 // Now you can use the logger throughout your app:
 logger.info("Application is starting...");
 
-declare module 'express-session' {
+/* declare module 'express-session' {
   export interface SessionData {
     isLoggedIn: boolean, 
     username: string
   }
-}
+} */
 // Express server initialization
 const app = express(); 
 
 app.use(cors({
-  origin: ["http://9.223.153.191", "http://9.223.172.61"], // Allow both with and without :80
+  origin: ["http://9.223.187.12", "http://9.223.187.12/80"], // Allow both with and without :80
   credentials: true
 }));
 

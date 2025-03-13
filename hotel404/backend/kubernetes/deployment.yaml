@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: hotel404-backend
-        image: deividasmalaska/hotel404-backend:latest  # Use the correct image here
+        image: hotel404containerregistry.azurecr.io/hotel404-backend:latest  # Use the correct image here
         imagePullPolicy: IfNotPresent
         ports:
           - containerPort: 7700   # NGINX listens on port 80 (per your Dockerfile)
@@ -32,6 +32,7 @@ kind: Service
 metadata:
   name: hotel404-backend
 spec:
+  loadBalancerIP: 9.223.201.90
   selector:
     app: hotel404-backend
   type: LoadBalancer

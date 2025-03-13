@@ -21,6 +21,8 @@ import SearchResults from './Components/homeScreen/searchResult';
 export const LoggedinContext = React.createContext<any>(false);
 export const UsernameContext = React.createContext<any>("");
 
+const API_URL = process.env.BACKEND_API_URL;
+
 
 const booking = () => {
   return (
@@ -41,7 +43,7 @@ const Application: React.FC = () => {
     const checkSession = async () => {
       try {
         // Check if the user is already logged in by making an API request
-        await axios.get("http://9.223.172.61:7700/api/user/session"); // backend url correct // backend 9.223.187.114:7700
+        await axios.get(`${ API_URL }/api/user/session`); // backend url correct
         setLoggedin(true);
       } catch {
         setLoggedin(false);

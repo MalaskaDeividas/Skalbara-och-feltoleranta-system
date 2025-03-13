@@ -1,12 +1,26 @@
-docker build -t deividasmalaska/hotel404-backend:latest .
+docker build -t hotel404-backend:latest .
+docker tag hotel404-backend:latest deividasmalaska/hotel404-backend:latest
 docker push deividasmalaska/hotel404-backend:latest
+
+kubectl rollout restart deployment hotel404-backend
+
+az acr login --name hotel404containerregistry
+docker tag hotel404-backend:latest hotel404containerregistry.azurecr.io/hotel404-backend:latest
+docker push hotel404containerregistry.azurecr.io/hotel404-backend:latest
 
 kubectl apply -f deployment.yaml 
 
 
 ## frontend 
 
-docker build -t deividasmalaska/hotel404-frontend:latest .
+docker build -t hotel404-frontend:latest .
+docker tag hotel404-frontend:latest deividasmalaska/hotel404-frontend:latest
 docker push deividasmalaska/hotel404-frontend:latest
+
+kubectl rollout restart deployment hotel404-frontend
+
+az acr login --name hotel404containerregistry
+docker tag hotel404-frontend:latest hotel404containerregistry.azurecr.io/hotel404-frontend:latest
+docker push hotel404containerregistry.azurecr.io/hotel404-frontend:latest
 
 kubectl apply -f deployment.yaml 
