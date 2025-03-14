@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: hotel404-backend
-  namespace: hotel404
 spec:
   replicas: 1
   selector:
@@ -16,9 +15,9 @@ spec:
       containers:
       - name: hotel404-backend
         image: hotel404containerregistry.azurecr.io/hotel404-backend:latest  # Use the correct image here
-        imagePullPolicy: IfNotPresent
+        imagePullPolicy: Always
         ports:
-          - containerPort: 7700   # NGINX listens on port 80 (per your Dockerfile)
+          - containerPort: 8080   # NGINX listens on port 80 (per your Dockerfile)
         resources:
           requests:
             cpu: 126m
@@ -38,5 +37,5 @@ spec:
   type: LoadBalancer
   ports:
     - protocol: TCP
-      port: 7700      # External port to reach the service
-      targetPort: 7700    # Matches containerPort (NGINX)
+      port: 8080      # External port to reach the service
+      targetPort: 8080    # Matches containerPort (NGINX)

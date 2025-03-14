@@ -1,7 +1,7 @@
 import {IHotelDetails} from "../Model/Hotel";
 import axios from "axios"; 
 
-const API_URL = process.env.BACKEND_API_URL;
+const API_URL = "http://9.223.201.90:8080";
 
 
 

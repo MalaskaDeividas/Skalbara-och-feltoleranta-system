@@ -14,8 +14,9 @@ spec:
     spec:
       containers:
       - name: hotel404-frontend
-        image: hotel404containerregistry.azurecr.io/hotel404-frontend:latest  # Use the correct image here
-        imagePullPolicy: IfNotPresent
+        image: hotel404containerregistry.azurecr.io/hotel404-frontend:latest  
+        imagePullPolicy: Always  # Ensure Kubernetes pulls the latest version
+
         ports:
           - containerPort: 80   # NGINX listens on port 80 (per your Dockerfile)
         resources:

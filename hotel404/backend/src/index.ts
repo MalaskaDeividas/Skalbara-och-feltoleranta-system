@@ -48,9 +48,10 @@ app.use(session({
   saveUninitialized: false,
   cookie:{
     maxAge: 30*60*1000, //store cookies for 30 mins
-    sameSite: 'none', 
-    secure: true
-  }
+    sameSite: "none", 
+    secure: true,
+    httpOnly: true,
+  },
 }));
 
 // MongoDB Database Connection
@@ -104,6 +105,6 @@ app.use((req, _, next) => {
 }); 
 
 // Start server on port 7700
-app.listen(7700, "0.0.0.0" , () => {
-  console.log("Listening on port 7700"); 
+app.listen(8080, "0.0.0.0" , () => {
+  console.log("Listening on port 8080"); 
 }); 

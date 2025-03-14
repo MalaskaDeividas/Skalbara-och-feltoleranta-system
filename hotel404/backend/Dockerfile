@@ -15,7 +15,7 @@ RUN npm install -g tsx
 COPY . .
 
 # Expose backend port
-EXPOSE 7700
+EXPOSE 8080
 
 # Start the backend
 CMD ["npm", "start"]

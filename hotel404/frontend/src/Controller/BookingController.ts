@@ -2,7 +2,7 @@ import { IBooking } from "../Model/Booking";
 import axios from "axios"; 
 
 
-const API_URL = process.env.BACKEND_API_URL;
+const API_URL = "http://9.223.201.90:8080";
 
 export async function GetBookings() {
     //Kommer göra en API request sen men returnerar statisk data just nu
