@@ -22,17 +22,11 @@ declare module 'express-session' {
 // Express server initialization
 const app = express(); 
 
-app.use(cors({
-  origin: ["http://9.223.153.191", "http://9.223.172.61"], // Allow both with and without :80
-  credentials: true
-}));
-
-
 // CORS middleware: Handles cross-origin resource sharing
-/* app.use(cors({
-  origin: "http://9.223.153.191:80", // frontend IP
+app.use(cors({
+  origin: "http://9.223.153.191:80", 
   credentials: true
-}));  */
+})); 
 // Parse incoming JSON request.
 // Middleware: Parses incoming JSON requests
 app.use(express.json());
