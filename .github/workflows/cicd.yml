@@ -35,6 +35,9 @@ jobs:
           client-id: ${{ env.CLIENT_ID }}
           tenant-id: ${{ env.TENANT_ID }}
           subscription-id: ${{ env.SUBSCRIPTION_ID }}
+          
+      - name: Verify Azure Account
+        run: az account show
 
       - name: Login to Docker Hub
         run: echo "${{ secrets.DEIVIDOCKER_PASSWORD }}" | docker login -u ${{ env.REGISTRY_USERNAME }} --password-stdin
