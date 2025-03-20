@@ -2,6 +2,8 @@ provider "azurerm" {
   features {}
 
   use_oidc = true  # Uses OpenID Connect authentication
+
+  subscription_id = "c19a0c4a-4e7d-44b1-8bb9-a7eee6259ec9"
 }
 
 resource "azurerm_resource_group" "rg" {
