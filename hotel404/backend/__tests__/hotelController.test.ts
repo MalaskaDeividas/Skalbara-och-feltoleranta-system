@@ -1,6 +1,7 @@
 import { getHotels, hotelFreeBetweenDates } from '../src/controllers/hotelController';
 import { Hotel } from '../src/Model/HotelModel';
 import { Booking } from '../src/Model/Booking';
+import logger from '../src/logger'; 
 
 // Mock the logger
 jest.mock('../src/logger');
@@ -43,5 +44,27 @@ describe('getHotels', () => {
     expect(hotels.length).toBe(2);
     expect(hotels[0]?.display?.title).toBe('Hotel A');
     expect(hotels[1]?.display?.title).toBe('Hotel B');
+  });
+});
+
+describe('hotelFreeBetweenDates', () => {
+  it('should return true if the hotel is free between the given dates', async () => {
+    // Mock Booking.find to return no overlapping bookings
+    (Booking.find as jest.Mock).mockResolvedValue([]);
+
+    const hotel = { _id: '1' };
+    const isFree = await hotelFreeBetweenDates(hotel, new Date('2023-12-01'), new Date('2023-12-05'));
+    expect(isFree).toBe(true);
+  });
+
+  it('should return false if the hotel is not free between the given dates', async () => {
+    // Mock Booking.find to return an overlapping booking
+    (Booking.find as jest.Mock).mockResolvedValue([
+      { from_date: '2023-12-03', to_date: '2023-12-07' },
+    ]);
+
+    const hotel = { _id: '1' };
+    const isFree = await hotelFreeBetweenDates(hotel, new Date('2023-12-01'), new Date('2023-12-05'));
+    expect(isFree).toBe(false);
   });
 });

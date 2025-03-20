@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1742511331442" clover="3.2.0">
-  <project timestamp="1742511331442" name="All files">
-    <metrics statements="94" coveredstatements="63" conditionals="23" coveredconditionals="12" methods="9" coveredmethods="5" elements="126" coveredelements="80" complexity="0" loc="94" ncloc="94" packages="3" files="5" classes="5"/>
+<coverage generated="1742513484469" clover="3.2.0">
+  <project timestamp="1742513484469" name="All files">
+    <metrics statements="94" coveredstatements="68" conditionals="23" coveredconditionals="15" methods="9" coveredmethods="5" elements="126" coveredelements="88" complexity="0" loc="94" ncloc="94" packages="3" files="5" classes="5"/>
     <package name="src">
       <metrics statements="18" coveredstatements="17" conditionals="9" coveredconditionals="7" methods="2" coveredmethods="2"/>
       <file name="logger.ts" path="/Users/sharbelkhoury/Skalbara/Skalbara-och-feltoleranta-system/hotel404/backend/src/logger.ts">
@@ -42,7 +42,7 @@
       </file>
     </package>
     <package name="src.controllers">
-      <metrics statements="70" coveredstatements="40" conditionals="14" coveredconditionals="5" methods="7" coveredmethods="3"/>
+      <metrics statements="70" coveredstatements="45" conditionals="14" coveredconditionals="8" methods="7" coveredmethods="3"/>
       <file name="auth.ts" path="/Users/sharbelkhoury/Skalbara/Skalbara-och-feltoleranta-system/hotel404/backend/src/controllers/auth.ts">
         <metrics statements="13" coveredstatements="13" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
@@ -60,7 +60,7 @@
         <line num="28" count="1" type="stmt"/>
       </file>
       <file name="hotelController.ts" path="/Users/sharbelkhoury/Skalbara/Skalbara-och-feltoleranta-system/hotel404/backend/src/controllers/hotelController.ts">
-        <metrics statements="57" coveredstatements="27" conditionals="12" coveredconditionals="3" methods="6" coveredmethods="2"/>
+        <metrics statements="57" coveredstatements="32" conditionals="12" coveredconditionals="6" methods="6" coveredmethods="2"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -79,16 +79,16 @@
         <line num="23" count="3" type="stmt"/>
         <line num="26" count="2" type="stmt"/>
         <line num="29" count="1" type="stmt"/>
-        <line num="30" count="3" type="stmt"/>
-        <line num="31" count="3" type="stmt"/>
-        <line num="32" count="3" type="stmt"/>
-        <line num="33" count="0" type="stmt"/>
-        <line num="34" count="0" type="stmt"/>
-        <line num="35" count="0" type="cond" truecount="0" falsecount="3"/>
-        <line num="36" count="0" type="stmt"/>
-        <line num="37" count="0" type="stmt"/>
-        <line num="40" count="3" type="stmt"/>
-        <line num="41" count="3" type="stmt"/>
+        <line num="30" count="5" type="stmt"/>
+        <line num="31" count="5" type="stmt"/>
+        <line num="32" count="5" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="35" count="1" type="cond" truecount="3" falsecount="0"/>
+        <line num="36" count="1" type="stmt"/>
+        <line num="37" count="1" type="stmt"/>
+        <line num="40" count="4" type="stmt"/>
+        <line num="41" count="4" type="stmt"/>
         <line num="44" count="1" type="stmt"/>
         <line num="45" count="0" type="stmt"/>
         <line num="46" count="0" type="stmt"/>
