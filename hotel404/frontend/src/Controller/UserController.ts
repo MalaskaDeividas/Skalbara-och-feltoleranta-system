@@ -1,7 +1,7 @@
 
 import axios, {AxiosError} from 'axios';
 
-const API_URL = "http://9.223.201.90:8080";
+const API_URL = "http://9.223.137.106:8080";
 
 
 

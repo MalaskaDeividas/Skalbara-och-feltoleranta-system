@@ -23,7 +23,7 @@ logger.info("Application is starting...");
 const app = express(); 
 
 app.use(cors({
-  origin: ["http://9.223.187.12", "http://9.223.187.12/80"], // Allow both with and without :80
+  origin: ["http://9.223.136.86", "http://9.223.136.86/80"], // Allow both with and without :80
   credentials: true
 }));
 

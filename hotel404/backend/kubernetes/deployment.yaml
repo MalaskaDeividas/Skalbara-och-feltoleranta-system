@@ -31,7 +31,7 @@ kind: Service
 metadata:
   name: hotel404-backend
 spec:
-  loadBalancerIP: 9.223.201.90
+  loadBalancerIP: 9.223.137.106
   selector:
     app: hotel404-backend
   type: LoadBalancer

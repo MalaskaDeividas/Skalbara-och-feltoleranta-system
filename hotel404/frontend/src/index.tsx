@@ -21,7 +21,7 @@ import SearchResults from './Components/homeScreen/searchResult';
 export const LoggedinContext = React.createContext<any>(false);
 export const UsernameContext = React.createContext<any>("");
 
-const API_URL = "http://9.223.201.90:8080";
+const API_URL = "http://9.223.137.106:8080";
 
 
 const booking = () => {

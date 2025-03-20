@@ -35,7 +35,7 @@ spec:
   selector:
     app: hotel404-frontend
   type: LoadBalancer
-  loadBalancerIP: 9.223.187.12
+  loadBalancerIP: 9.223.136.86
   ports:
     - protocol: TCP
       port: 80      # External port to reach the service
