@@ -26,13 +26,11 @@ app.use(cors({
   origin: ["http://9.223.187.12", "http://9.223.187.12/80"], // Allow both with and without :80
   credentials: true
 }));
-
-
 // CORS middleware: Handles cross-origin resource sharing
-/* app.use(cors({
-  origin: "http://9.223.153.191:80", // frontend IP
+/*app.use(cors({
+  origin: "http://9.223.153.191:80", 
   credentials: true
-}));  */
+}));*/ 
 // Parse incoming JSON request.
 // Middleware: Parses incoming JSON requests
 app.use(express.json());
