@@ -1,10 +1,10 @@
 import request from "supertest";
 import jwt from "jsonwebtoken";
-import { authenticateJWT } from "../src/controllers/auth";
 import express, {Request, Response, NextFunction } from "express";
 import { Cookie } from "express-session";
 import { accessTokenSecret } from "../src/controllers/auth";
 import cookieParser from "cookie-parser";
+import { login, authenticateJWT } from "../src/controllers/authenticate-service"; // adjust path as needed
 
 declare module "express-serve-static-core" {
     interface Request {
@@ -16,6 +16,10 @@ const app = express();
 app.use(express.json());
 app.use(cookieParser());
 
+app.post("/login", login);
+app.get("/protected", authenticateJWT, (req, res) => {
+    res.json({ message: "Access granted", user: req.user });
+});
 
 //mock routar 
 app.get("/protected", authenticateJWT, (req, res) => {
