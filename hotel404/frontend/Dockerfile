@@ -3,12 +3,14 @@ FROM node:16-alpine as build-stage
 
 WORKDIR /app
 
-# Copy dependencies files and install
+# Copy package.json first to optimize Docker caching
 COPY package*.json ./
 RUN npm install
 
-# Copy the entire app and build it
+# Now copy the rest of the files
 COPY . .
+
+# Build the React app
 RUN npm run build  
 
 # Second stage: Serve the static files with Nginx
@@ -25,4 +27,3 @@ EXPOSE 80
 
 # Start Nginx when the container starts
 CMD ["nginx", "-g", "daemon off;"]
-

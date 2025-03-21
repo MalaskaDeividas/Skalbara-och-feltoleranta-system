@@ -1,14 +1,18 @@
 import { IBooking } from "../Model/Booking";
 import axios from "axios"; 
+
+
+const API_URL = "http://9.223.137.106:8080";
+
 export async function GetBookings() {
     //Kommer göra en API request sen men returnerar statisk data just nu
-    const bookings = await axios.get("http://9.223.172.61:7700/api/booking/");
+    const bookings = await axios.get(`${ API_URL }/api/booking/`);
     console.log(bookings.data); 
     return bookings.data; 
 }
 //För att hantera "cancel booking"
 export async function DeleteBooking(id: string){
-  const deleted = await axios.delete("http://9.223.172.61:7700/api/booking", {data: {bookingId: id}}); 
+  const deleted = await axios.delete(`${ API_URL }/api/booking`, {data: {bookingId: id}}); 
 }
 //Skapar en bokning med hotell detaljerna samt binder det till användaren som utför bokningen
 export async function CreateBooking(
@@ -17,7 +21,7 @@ export async function CreateBooking(
   from_date:string,
   to_date: string){
 
-  await axios.post("http://9.223.172.61:7700/api/booking/", {
+  await axios.post(`${ API_URL }/api/booking/`, {
     hotelID: hotelId,  
     user: user,
     from_date: from_date,
