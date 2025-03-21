@@ -12,7 +12,8 @@ RUN npm install
 RUN npm install -g tsx
 
 # Copy the entire backend code
-COPY . .
+COPY src/controllers/authenticate-service.ts ./controllers/
+COPY tsconfig.json ./
 
 # Expose backend port
 EXPOSE 8080

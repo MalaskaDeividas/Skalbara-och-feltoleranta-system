@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: auth-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: auth-service
+  template:
+    metadata:
+      labels:
+        app: auth-service
+    spec:
+      containers:
+      - name: auth-service
+        image: hotel404containerregistry123.azurecr.io/auth-service:latest  # Use the correct image here
+        imagePullPolicy: Always
+        ports:
+          - containerPort: 8080   # NGINX listens on port 8080 (per your Dockerfile)
+        resources:
+          requests:
+            cpu: 126m
+            memory: 256Mi
+          limits:
+            cpu: 256m
+            memory: 512Mi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: auth-service
+spec:
+  loadBalancerIP: 9.223.137.106
+  selector:
+    app: auth-service
+  type: LoadBalancer
+  ports:
+    - protocol: TCP
+      port: 80      # External port to reach the service
+      targetPort: 8080    # Matches containerPort (NGINX)
