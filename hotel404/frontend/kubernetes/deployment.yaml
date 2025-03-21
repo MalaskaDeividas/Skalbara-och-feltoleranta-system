@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: hotel404-frontend
-        image: hotel404containerregistry.azurecr.io/hotel404-frontend:latest  
+        image: hotel404containerregistry123.azurecr.io/hotel404-frontend:latest  
         imagePullPolicy: Always  # Ensure Kubernetes pulls the latest version
 
         ports:

@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: hotel404-backend
-        image: hotel404containerregistry.azurecr.io/hotel404-backend:latest  # Use the correct image here
+        image: hotel404containerregistry123.azurecr.io/hotel404-backend:latest  # Use the correct image here
         imagePullPolicy: Always
         ports:
           - containerPort: 8080   # NGINX listens on port 80 (per your Dockerfile)

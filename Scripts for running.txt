@@ -1,11 +1,11 @@
 docker build -t hotel404-backend:latest .
 
 
-docker tag hotel404-backend:latest hotel404containerregistry.azurecr.io/hotel404-backend:latest
+docker tag hotel404-backend:latest hotel404containerregistry123.azurecr.io/hotel404-backend:latest
 
 
-az acr login --name hotel404containerregistry
-docker push hotel404containerregistry.azurecr.io/hotel404-backend:latest
+az acr login --name hotel404containerregistry123
+docker push hotel404containerregistry123.azurecr.io/hotel404-backend:latest
 
 kubectl apply -f deployment.yaml 
 
@@ -16,10 +16,10 @@ kubectl apply -f deployment.yaml
 docker build -t hotel404-frontend:latest .
 
 
-docker tag hotel404-frontend:latest hotel404containerregistry.azurecr.io/hotel404-frontend:latest
+docker tag hotel404-frontend:latest hotel404containerregistry123.azurecr.io/hotel404-frontend:latest
 
 
-az acr login --name hotel404containerregistry
-docker push hotel404containerregistry.azurecr.io/hotel404-frontend:latest
+az acr login --name hotel404containerregistry123
+docker push hotel404containerregistry123.azurecr.io/hotel404-frontend:latest
 
 kubectl apply -f deployment.yaml 
