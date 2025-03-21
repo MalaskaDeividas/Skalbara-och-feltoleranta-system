@@ -14,7 +14,7 @@ userRouter.post("/login", async function(req, res, next){
     const validUser = await AuthLogin(username, password);
     logger.info('Rounting to handle user login!');    
     const accessToken = jwt.sign({username: username}, accessTokenSecret, {expiresIn: "20m"});
-    res.cookie('token', accessToken, {httpOnly: true}); 
+    res.cookie('token', accessToken, { httpOnly: true, sameSite: 'none', secure: true });
     res.sendStatus(201); 
     req.session.isLoggedIn = true;
     req.session.username = username;
@@ -66,22 +66,39 @@ userRouter.delete("/deleteme", authenticateJWT, async function(req, res){
   }
 });
 // Route to handle user logout (authenticated)
-userRouter.get("/logout", authenticateJWT, async function(req, res){
+userRouter.get("/logout", authenticateJWT, async function(req, res) {
   try {
-    res.cookie("token", "none", {maxAge: 1});
-    logger.info('Routing to handle user logout!');
-    res.sendStatus(200);
+    req.session.destroy(err => {
+      if (err) {
+        logger.error("Error destroying session");
+        return res.sendStatus(500);
+      }
+      res.clearCookie("connect.sid"); // Clear session cookie
+      logger.info("User logged out!");
+      res.sendStatus(200);
+    });
   } catch {
-    logger.error('Routing to logout user failed');
+    logger.error("Routing to logout user failed");
     res.sendStatus(400);
   }
-  
 });
 
+
 // Route to check if a user is authenticated (session check)
-userRouter.get("/session", authenticateJWT, (req, res) => {
+/* userRouter.get("/session", authenticateJWT, (req, res) => {
  res.sendStatus(200);  
-}); 
+});  */
+
+userRouter.get("/session", (req, res) => {
+  console.log("Session Data:", req.session);
+  if (req.session && req.session.isLoggedIn) {
+    res.sendStatus(200);
+  } else {
+    res.sendStatus(401);
+  }
+});
+
+
 
 
 

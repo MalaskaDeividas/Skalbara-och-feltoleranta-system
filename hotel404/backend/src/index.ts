@@ -13,20 +13,24 @@ import logger from './logger.js';
 // Now you can use the logger throughout your app:
 logger.info("Application is starting...");
 
-declare module 'express-session' {
+/* declare module 'express-session' {
   export interface SessionData {
     isLoggedIn: boolean, 
     username: string
   }
-}
+} */
 // Express server initialization
 const app = express(); 
 
-// CORS middleware: Handles cross-origin resource sharing
 app.use(cors({
+  origin: ["http://9.223.136.86", "http://9.223.136.86/80"], // Allow both with and without :80
+  credentials: true
+}));
+// CORS middleware: Handles cross-origin resource sharing
+/*app.use(cors({
   origin: "http://9.223.153.191:80", 
   credentials: true
-})); 
+}));*/ 
 // Parse incoming JSON request.
 // Middleware: Parses incoming JSON requests
 app.use(express.json());
@@ -42,9 +46,10 @@ app.use(session({
   saveUninitialized: false,
   cookie:{
     maxAge: 30*60*1000, //store cookies for 30 mins
-    sameSite: 'none', 
-    secure: true
-  }
+    sameSite: "none", 
+    secure: true,
+    httpOnly: true,
+  },
 }));
 
 // MongoDB Database Connection
@@ -98,6 +103,6 @@ app.use((req, _, next) => {
 }); 
 
 // Start server on port 7700
-app.listen(7700, "0.0.0.0" , () => {
-  console.log("Listening on port 7700"); 
+app.listen(8080, "0.0.0.0" , () => {
+  console.log("Listening on port 8080"); 
 }); 
