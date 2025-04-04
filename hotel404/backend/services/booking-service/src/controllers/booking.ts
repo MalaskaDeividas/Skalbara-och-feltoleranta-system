@@ -1,6 +1,6 @@
 import { Booking } from "../Model/Booking"; 
-import { Hotel } from "../Model/HotelModel";
-import logger from '../logger';
+import { Hotel } from "../../../../src/Model/HotelModel";
+import logger from '../../../../src/logger';
 
 
 // Function to delete a booking by its ID

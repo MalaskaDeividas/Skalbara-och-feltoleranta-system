@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 import { User } from "../Model/User";
 import { error } from "console";
-import { Booking } from "../Model/Booking";
+import { Booking } from "../../services/booking-service/src/Model/Booking";
 import logger from  "../logger";
 
 

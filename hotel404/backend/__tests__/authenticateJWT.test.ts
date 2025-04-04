@@ -2,7 +2,7 @@ import request from "supertest";
 import jwt from "jsonwebtoken";
 import express, {Request, Response, NextFunction } from "express";
 import { Cookie } from "express-session";
-import { accessTokenSecret } from "../src/controllers/auth";
+import { accessTokenSecret } from "../services/auth-service/auth";
 import cookieParser from "cookie-parser";
 import { login, authenticateJWT } from "../src/controllers/authenticate-service"; // adjust path as needed
 

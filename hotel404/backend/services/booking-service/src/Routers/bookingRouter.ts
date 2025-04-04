@@ -1,7 +1,7 @@
 import { deleteBooking, createBooking, getBookingForUser } from "../controllers/booking";
-import { authenticateJWT } from "../controllers/auth";
+import { authenticateJWT } from "../../../auth-service/src/controllers/auth";
 import express from 'express';
-import logger from "../logger";
+import logger from "../../../../src/logger";
 
 const bookingRouter = express.Router();
 // Route to create a booking with JWT authentication

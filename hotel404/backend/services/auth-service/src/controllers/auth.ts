@@ -1,6 +1,6 @@
 import jwt from "jsonwebtoken"; 
 import { Request, Response, NextFunction } from "express"; 
-import logger from "../logger";
+import logger from "../../../../src/logger";
 
 // Secret key for signing and verifying JWT tokens
 export const accessTokenSecret = "CcBcjADRsaP6AHcWZ0tn";
