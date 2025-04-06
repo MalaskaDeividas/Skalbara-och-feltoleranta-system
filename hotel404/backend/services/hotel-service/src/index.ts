@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 import cors from 'cors';
 import session from "express-session";
 import cookieParser from "cookie-parser";
-import hotelRouter from "./Routers/hotelRouter"; // this file must exist in this service
+import hotelRouter from "../../booking-service/src/Routers/hotelRouter"; // this file must exist in this service
 import logger from '../../../src/logger'; // if used, otherwise remove
 
 const app = express();

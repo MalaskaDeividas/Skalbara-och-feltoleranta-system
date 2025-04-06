@@ -7,33 +7,22 @@ const PORT = 8080;
 
 // Enable CORS
 app.use(cors({
-  origin: "*", // Adjust this in production
+  origin: "http://9.223.136.86",
   credentials: true,
 }));
 
 // Proxy routes
-app.use("/api/auth", createProxyMiddleware({
-  target: "http://auth-service:8080", // Docker service name
-  changeOrigin: true,
-  pathRewrite: { "^/api/auth": "" }
-}));
 
 app.use("/api/user", createProxyMiddleware({
-  target: "http://user-service:8080",
+  target: "http://user-service:8079",
   changeOrigin: true,
   pathRewrite: { "^/api/user": "" }
 }));
 
 app.use("/api/booking", createProxyMiddleware({
-  target: "http://booking-service:8080",
+  target: "http://booking-service:8078", // booking, auth and hotel
   changeOrigin: true,
   pathRewrite: { "^/api/booking": "" }
-}));
-
-app.use("/api/hotels", createProxyMiddleware({
-  target: "http://hotel-service:8080",
-  changeOrigin: true,
-  pathRewrite: { "^/api/hotels": "" }
 }));
 
 // Start gateway

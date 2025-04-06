@@ -6,7 +6,7 @@ import userRouter from "./Routers/userRouter";
 import cors from 'cors';
 import session from "express-session";
 import cookieParser from "cookie-parser"; 
-import logger from '../../../src/logger.js';
+import logger from "./logger";
 
 // Now you can use the logger throughout your app:
 logger.info("Application is starting...");

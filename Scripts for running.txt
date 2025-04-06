@@ -1,14 +1,68 @@
-docker build -t hotel404-backend:latest .
+
+## auth-service
+
+docker build -t auth-service:latest .
 
 
-docker tag hotel404-backend:latest hotel404containerregistry123.azurecr.io/hotel404-backend:latest
+docker tag auth-service:latest hotel404containerregistry123.azurecr.io/auth-service:latest
 
 
 az acr login --name hotel404containerregistry123
-docker push hotel404containerregistry123.azurecr.io/hotel404-backend:latest
+docker push hotel404containerregistry123.azurecr.io/auth-service:latest
 
-kubectl apply -f deployment.yaml 
+## booking-service
 
+docker build -t booking-service:latest .
+
+
+docker tag booking-service:latest hotel404containerregistry123.azurecr.io/booking-service:latest
+
+
+az acr login --name hotel404containerregistry123
+docker push hotel404containerregistry123.azurecr.io/booking-service:latest
+
+## gateway-service
+
+docker build -t gateway-service:latest .
+
+
+docker tag gateway-service:latest hotel404containerregistry123.azurecr.io/gateway-service:latest
+
+
+az acr login --name hotel404containerregistry123
+docker push hotel404containerregistry123.azurecr.io/gateway-service:latest
+
+## hotel-service
+
+docker build -t hotel-service:latest .
+
+
+docker tag hotel-service:latest hotel404containerregistry123.azurecr.io/hotel-service:latest
+
+
+az acr login --name hotel404containerregistry123
+docker push hotel404containerregistry123.azurecr.io/hotel-service:latest
+
+## user-service
+
+docker build -t user-service:latest .
+
+
+docker tag user-service:latest hotel404containerregistry123.azurecr.io/user-service:latest
+
+
+az acr login --name hotel404containerregistry123
+docker push hotel404containerregistry123.azurecr.io/user-service:latest
+
+## deploying backend
+
+kubectl apply -f auth-deployment.yaml
+kubectl apply -f booking-deployment.yaml
+kubectl apply -f gateway-deployment.yaml
+kubectl apply -f hotel-deployment.yaml
+kubectl apply -f user-deployment.yaml 
+
+------------------------------------------------------------------------------------
 
 ## frontend 
 

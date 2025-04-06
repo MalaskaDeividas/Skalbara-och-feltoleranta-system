@@ -6,7 +6,7 @@ const API_URL = "http://9.223.137.106:8080";
 
 
 export async function getHotelInfo(){
-  const hotels = await axios.get(`${ API_URL }/api/hotels/all`);
+  const hotels = await axios.get(`/api/hotels/all`);
   const formattedHotels = hotels.data.map((hotel: any) => {
     return {
       ...hotel.display,
@@ -19,7 +19,7 @@ export async function getHotelInfo(){
 
 
 export async function getHotelQuery(params: any){
-  const hotels = await axios.get(`${ API_URL }/api/hotels/getHotels`, {params});
+  const hotels = await axios.get(`/api/hotels/getHotels`, {params});
   const formattedHotels = hotels.data.map((hotel: any) => {
     return {
       ...hotel.display,
@@ -33,7 +33,7 @@ export async function getHotelQuery(params: any){
 export async function getHotelPage(id: string): Promise<IHotelDetails>{
   console.log(id); 
   const params = new URLSearchParams([['hotelId', id]]);
-  const hotel = await axios.get(`${ API_URL }/api/hotels/hotelDetails`, {params});
+  const hotel = await axios.get(`/api/hotels/hotelDetails`, {params});
   console.log(hotel.data); 
   return hotel.data; 
 }

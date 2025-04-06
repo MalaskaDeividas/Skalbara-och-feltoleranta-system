@@ -1,7 +1,7 @@
 import { AuthLogin, newUser, deleteUser } from "../controllers/userController"; 
-import { accessTokenSecret, authenticateJWT } from "../../../auth-service/src/controllers/auth";
+import { accessTokenSecret, authenticateJWT } from "../controllers/auth";
 import jwt from "jsonwebtoken"; 
-import logger from "../../../../src/logger";
+import logger from "../logger";
 
 
 import express from "express"; 

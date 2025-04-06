@@ -2,7 +2,7 @@ import { createHotel, getHotels, getAllHotels, getHotelDocumentById} from "../co
 
 import express from "express";
 import { Request } from "express";
-import logger from "../../../../src/logger";
+import logger from "../logger";
 
 const hotelRouter = express.Router(); 
 // Route to get all hotels

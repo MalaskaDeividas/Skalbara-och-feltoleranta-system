@@ -4,7 +4,7 @@ import cors from "cors";
 import session from "express-session";
 import cookieParser from "cookie-parser";
 import bookingRouter from "./Routers/bookingRouter"; // adjust path if needed
-import logger from '../../../src/logger';
+import logger from "./logger";
 
 const app = express();
 const PORT = 8080;

@@ -2,7 +2,7 @@
 // för att köra: PS C:\Users\David\Desktop\Skola\WA\hotel-404\backend\src> npx tsx index.ts
 import express from "express"; 
 import mongoose from "mongoose";
-import hotelRouter from "../services/hotel-service/src/Routers/hotelRouter"; 
+import hotelRouter from "../services/booking-service/src/Routers/hotelRouter"; 
 import userRouter from "../services/user-service/src/Routers/userRouter"; 
 import bookingRouter from "../services/booking-service/src/Routers/bookingRouter";
 import cors from 'cors';

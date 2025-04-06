@@ -1,8 +1,8 @@
+import { deleteBookingsByUsername } from "../utils/bookingAPI";
 import mongoose from "mongoose";
 import { User } from "../Model/User";
 import { error } from "console";
-import { Booking } from "../../../booking-service/src/Model/Booking";
-import logger from  "../../../../src/logger";
+import logger from  "../logger";
 
 
 //function som hanterar login
@@ -101,9 +101,10 @@ export async function deleteUser(username:string) {
     try 
     {
         // Find the user, delete the users bookings and then delete the user
-        const user  = await User.findOne({username: username});
-        await Booking.deleteMany({user: username});
-        await User.deleteOne({username: username });
+        await deleteBookingsByUsername(username);
+        await User.deleteOne({ username });
+        
+        logger.info(`Deleted user ${username} and their bookings`);
     }
     catch (error)
     {
