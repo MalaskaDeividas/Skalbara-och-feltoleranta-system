@@ -1,0 +1,28 @@
+# Ignore node_modules
+node_modules/
+
+# Ignore build artifacts
+build/
+dist/
+*.log
+
+# Ignore Dockerfile and any local configuration files
+Dockerfile
+.dockerignore
+*.md
+
+# Ignore test files
+test/
+tests/
+
+# Ignore IDE and editor settings
+.vscode/
+.idea/
+
+# Ignore version control directories
+.git/
+.gitmodules
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db

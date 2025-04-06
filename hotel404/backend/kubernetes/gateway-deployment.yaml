@@ -1,0 +1,11 @@
+# Example service name in docker-compose or K8s:
+services:
+  gateway-service:
+    build: ./services/gateway-service
+    ports:
+      - "8080:8080"
+    depends_on:
+      - auth-service
+      - user-service
+      - booking-service
+      - hotel-service

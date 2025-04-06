@@ -1,7 +1,7 @@
 import { AuthLogin, newUser, deleteUser } from "../controllers/userController"; 
-import { accessTokenSecret, authenticateJWT } from "../../services/auth-service/auth";
+import { accessTokenSecret, authenticateJWT } from "../../../auth-service/src/controllers/auth";
 import jwt from "jsonwebtoken"; 
-import logger from "../logger";
+import logger from "../../../../src/logger";
 
 
 import express from "express"; 
@@ -90,12 +90,10 @@ userRouter.get("/logout", authenticateJWT, async function(req, res) {
 });  */
 
 userRouter.get("/session", (req, res) => {
-  console.log("Session Data:", req.session);
-  if (req.session && req.session.isLoggedIn) {
-    res.sendStatus(200);
-  } else {
-    res.sendStatus(401);
+  if (req.session && req.session?.username) {
+    return res.status(200).json({ username: req.session.username });
   }
+  return res.status(401).json({ message: "Not authenticated" });
 });
 
 

@@ -2,13 +2,11 @@
 // för att köra: PS C:\Users\David\Desktop\Skola\WA\hotel-404\backend\src> npx tsx index.ts
 import express from "express"; 
 import mongoose from "mongoose";
-import hotelRouter from "../services/hotel-service/src/Routers/hotelRouter"; 
-import userRouter from "../services/user-service/src/Routers/userRouter"; 
-import bookingRouter from "../services/booking-service/src/Routers/bookingRouter";
+import userRouter from "./Routers/userRouter"; 
 import cors from 'cors';
 import session from "express-session";
 import cookieParser from "cookie-parser"; 
-import logger from './logger.js';
+import logger from '../../../src/logger.js';
 
 // Now you can use the logger throughout your app:
 logger.info("Application is starting...");
@@ -57,10 +55,10 @@ const mongoURI = 'mongodb+srv://made22sx:ae4XaUE6VJDjgBss@cluster0.h4bzj.mongodb
 
 mongoose.connect(mongoURI)
   .then(() => {
-    console.log('Connected to MongoDB Atlas');
+    console.log('✅ Connected to MongoDB Atlas');
   })
   .catch(err => {
-    console.error('MongoDB connection error:', err);
+    console.error('❌ MongoDB connection error:', err);
   });
 
 // Liveness Probe
@@ -92,9 +90,7 @@ app.get("/ready", (req, res) => {
 });
 
 // Route handling
-app.use("/api/hotels", hotelRouter); 
 app.use("/api/user", userRouter);
-app.use("/api/booking", bookingRouter); 
 
 // Logging middleware: Logs request method and path
 app.use((req, _, next) => {
@@ -104,5 +100,5 @@ app.use((req, _, next) => {
 
 // Start server on port 8080
 app.listen(8080, "0.0.0.0" , () => {
-  console.log("Listening on port 8080"); 
+  console.log("📅 Listening on port 8080"); 
 }); 

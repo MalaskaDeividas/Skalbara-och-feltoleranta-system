@@ -1,5 +1,5 @@
 import { Booking } from "../Model/Booking"; 
-import { Hotel } from "../../../../src/Model/HotelModel";
+import { Hotel } from "../../../hotel-service/src/Model/HotelModel";
 import logger from '../../../../src/logger';
 
 

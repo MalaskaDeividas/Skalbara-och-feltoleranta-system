@@ -17,7 +17,7 @@ spec:
         image: hotel404containerregistry123.azurecr.io/auth-service:latest  # Use the correct image here
         imagePullPolicy: Always
         ports:
-          - containerPort: 8080   # NGINX listens on port 8080 (per your Dockerfile)
+          - containerPort: 8080   # NGINX listens on port 80 (per your Dockerfile)
         resources:
           requests:
             cpu: 126m
@@ -31,11 +31,10 @@ kind: Service
 metadata:
   name: auth-service
 spec:
-  loadBalancerIP: 9.223.137.106
   selector:
     app: auth-service
-  type: LoadBalancer
+  type: ClusterIP
   ports:
     - protocol: TCP
-      port: 80      # External port to reach the service
+      port: 8080      # External port to reach the service
       targetPort: 8080    # Matches containerPort (NGINX)

@@ -3,6 +3,9 @@ import {login} from "../controllers/authenticate-service" // assuming you place 
 import cookieParser from "cookie-parser"; 
 import {authenticateJWT} from "../controllers/auth"
 
+
+const authRouter = express.Router();
+
 const app = express();
 app.use(express.json());
 app.use(cookieParser());
@@ -18,3 +21,5 @@ app.get("/protected", authenticateJWT, (req, res) => {
 app.listen(3001, () => {
     console.log("Auth service running on port 3001");
 });
+
+export default authRouter; // Export the router for use in other files
